@@ -793,6 +793,12 @@
             box-shadow: 0 6px 16px rgba(14, 21, 18, 0.15);
         }
 
+        .carousel-arrow:disabled {
+            opacity: 0.35;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+
         .carousel-arrow svg {
             width: 18px;
             height: 18px;
@@ -2792,11 +2798,15 @@
                 const slides = carouselEl.querySelector('.carousel-slides');
                 const slideCount = slides.children.length;
                 const dotsContainer = carouselEl.querySelector('.carousel-dots');
+                const prevBtn = carouselEl.querySelector('.arrow-prev');
+                const nextBtn = carouselEl.querySelector('.arrow-next');
                 
                 carousels[id] = {
                     current: 0,
                     total: slideCount,
-                    element: slides
+                    element: slides,
+                    prevBtn: prevBtn,
+                    nextBtn: nextBtn
                 };
 
                 // Create Dots
@@ -2813,16 +2823,23 @@
                 }
 
                 // Attach button listeners
-                carouselEl.querySelector('.arrow-prev').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    prevSlide(id);
-                });
-                carouselEl.querySelector('.arrow-next').addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    nextSlide(id);
-                });
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        prevSlide(id);
+                    });
+                }
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        nextSlide(id);
+                    });
+                }
+
+                // Initial update to set disabled state
+                updateCarousel(id);
             });
         }
 
@@ -2835,23 +2852,38 @@
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === state.current);
             });
+
+            // Update arrow buttons disabled state
+            if (state.prevBtn) {
+                state.prevBtn.disabled = (state.current === 0);
+            }
+            if (state.nextBtn) {
+                state.nextBtn.disabled = (state.current === state.total - 1);
+            }
         }
 
         function nextSlide(id) {
             const state = carousels[id];
-            state.current = (state.current + 1) % state.total;
-            updateCarousel(id);
+            if (state.current < state.total - 1) {
+                state.current += 1;
+                updateCarousel(id);
+            }
         }
 
         function prevSlide(id) {
             const state = carousels[id];
-            state.current = (state.current - 1 + state.total) % state.total;
-            updateCarousel(id);
+            if (state.current > 0) {
+                state.current -= 1;
+                updateCarousel(id);
+            }
         }
 
         function gotoSlide(id, index) {
-            carousels[id].current = index;
-            updateCarousel(id);
+            const state = carousels[id];
+            if (index >= 0 && index < state.total) {
+                state.current = index;
+                updateCarousel(id);
+            }
         }
 
         // Initialize carousels on load
