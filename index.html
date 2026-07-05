@@ -1314,212 +1314,7 @@
             line-height: 1.6;
         }
 
-        /* --- BOOKING INQUIRY FORM --- */
-        #booking-form {
-            padding: 120px 0;
-            background: var(--bg-primary);
-        }
 
-        .booking-grid {
-            display: grid;
-            grid-template-columns: 0.95fr 1.05fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .booking-info {
-            padding-right: 40px;
-        }
-
-        .booking-info-title {
-            font-size: clamp(36px, 4vw, 52px);
-            margin-bottom: 20px;
-            color: var(--text-primary);
-        }
-
-        .booking-info-title span {
-            font-style: italic;
-            color: var(--accent-primary);
-        }
-
-        .booking-info-desc {
-            font-size: 16px;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-        }
-
-        .booking-contacts-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .booking-contact-item {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .booking-contact-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--bg-secondary);
-            border: 1px solid rgba(93, 122, 85, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(14, 21, 18, 0.02);
-        }
-
-        .booking-contact-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--accent-primary);
-        }
-
-        .booking-contact-details h4 {
-            font-family: var(--font-body);
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--accent-secondary);
-        }
-
-        .booking-contact-details p {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        /* Inquiry Form Styling */
-        .form-card {
-            background: var(--bg-secondary);
-            border-radius: var(--radius-card);
-            border: 1px solid rgba(93, 122, 85, 0.1);
-            padding: 48px;
-            box-shadow: 0 20px 50px rgba(14, 21, 18, 0.05);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 24px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 24px;
-        }
-
-        .form-group.no-margin {
-            margin-bottom: 0;
-        }
-
-        .form-group label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--text-primary);
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            background: var(--bg-primary);
-            border: 1.5px solid rgba(93, 122, 85, 0.15);
-            border-radius: 14px;
-            padding: 16px 20px;
-            font-family: var(--font-body);
-            font-size: 14px;
-            color: var(--text-primary);
-            outline: none;
-            transition: var(--transition-smooth);
-        }
-
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--accent-primary);
-            background: #FFFFFF;
-            box-shadow: 0 4px 15px rgba(93, 122, 85, 0.08);
-        }
-
-        .form-group textarea {
-            resize: none;
-            height: 120px;
-        }
-
-        .form-actions {
-            display: grid;
-            grid-template-columns: 1.4fr 0.6fr;
-            gap: 16px;
-        }
-
-        .btn-submit-form {
-            background: var(--accent-primary);
-            color: var(--text-light);
-            border: none;
-            padding: 18px;
-            border-radius: 16px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 8px 20px rgba(79, 101, 77, 0.15);
-        }
-
-        .btn-submit-form:hover {
-            background: #3A4B39;
-            box-shadow: 0 10px 25px rgba(58, 75, 57, 0.25);
-            transform: translateY(-2px);
-        }
-
-        .btn-submit-form svg {
-            width: 16px;
-            height: 16px;
-            fill: var(--text-light);
-        }
-
-        .btn-call-direct {
-            background: transparent;
-            border: 1.5px solid rgba(93, 122, 85, 0.3);
-            color: var(--text-primary);
-            border-radius: 16px;
-            padding: 18px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .btn-call-direct:hover {
-            border-color: var(--text-primary);
-            background: rgba(17, 26, 21, 0.02);
-            transform: translateY(-2px);
-        }
-
-        .btn-call-direct svg {
-            width: 16px;
-            height: 16px;
-            fill: var(--text-primary);
-        }
 
         /* --- DEEP FOREST LUXURY FOOTER --- */
         footer {
@@ -1725,14 +1520,7 @@
                 position: static;
             }
 
-            .booking-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
 
-            .booking-info {
-                padding-right: 0;
-            }
 
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -2165,7 +1953,7 @@
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#rules">Rules</a></li>
                     <li><a href="#location">Location</a></li>
-                    <li><a href="#booking-form">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <button class="btn-nav-book" onclick="openBookingModal(event)">Book Now</button>
                 <button class="nav-toggle" id="menu-toggle" aria-label="Toggle Menu">
@@ -2186,7 +1974,7 @@
         <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
         <li><a href="#rules" onclick="toggleMenu()">Rules</a></li>
         <li><a href="#location" onclick="toggleMenu()">Location</a></li>
-        <li><a href="#booking-form" onclick="toggleMenu()">Contact</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
     </ul>
 
     <!-- --- HERO SECTION --- -->
@@ -2815,108 +2603,8 @@
         </div>
     </section>
 
-    <!-- --- BOOKING INQUIRY FORM --- -->
-    <section id="booking-form">
-        <div class="container">
-            <div class="booking-grid">
-                <div class="booking-info">
-                    <span class="section-tag">Instant Reservation</span>
-                    <h2 class="booking-info-title">Plan Your <span>Stay</span></h2>
-                    <p class="booking-info-desc">Fill out our booking inquiry questionnaire below, and our reservations team will instantly verify availability and contact you on WhatsApp/Phone within minutes.</p>
-                    
-                    <div class="booking-contacts-list">
-                        <!-- Contact 1 -->
-                        <div class="booking-contact-item">
-                            <div class="booking-contact-icon">
-                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                            </div>
-                            <div class="booking-contact-details">
-                                <h4>Primary Helpline</h4>
-                                <p>+91 84866 27950</p>
-                            </div>
-                        </div>
-
-                        <!-- Contact 2 -->
-                        <div class="booking-contact-item">
-                            <div class="booking-contact-icon">
-                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                            </div>
-                            <div class="booking-contact-details">
-                                <h4>Alternate Helpline</h4>
-                                <p>+91 96787 84771</p>
-                            </div>
-                        </div>
-
-                        <!-- Contact 3 -->
-                        <div class="booking-contact-item">
-                            <div class="booking-contact-icon">
-                                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                            </div>
-                            <div class="booking-contact-details">
-                                <h4>Instagram Handle</h4>
-                                <p>@alpinenest_homestay_dibrugarh</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-card">
-                    <form id="inquiryForm" onsubmit="handleFormSubmit(event)">
-                        <div class="form-row">
-                            <div class="form-group no-margin">
-                                <label for="checkin">Check-In Date</label>
-                                <input type="date" id="checkin" required>
-                            </div>
-                            <div class="form-group no-margin">
-                                <label for="checkout">Check-Out Date</label>
-                                <input type="date" id="checkout" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group no-margin">
-                                <label for="guests">Guests Count</label>
-                                <select id="guests">
-                                    <option value="1 Guest">1 Guest</option>
-                                    <option value="2 Guests" selected>2 Guests</option>
-                                    <option value="3 Guests">3 Guests</option>
-                                    <option value="4 Guests">4 Guests</option>
-                                    <option value="5+ Guests">5+ Guests</option>
-                                </select>
-                            </div>
-                            <div class="form-group no-margin">
-                                <label for="room-select">Room Category</label>
-                                <select id="room-select">
-                                    <option value="Skyline Suite (Luxury 1BHK)">Skyline Suite (1BHK)</option>
-                                    <option value="Capsule Studio (Luxury 1RK)">Capsule Studio (1RK)</option>
-                                    <option value="Cozy 2BHK Studio">Cozy 2BHK Studio</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Special Inquiries / Message</label>
-                            <textarea id="message" placeholder="Provide extra requirements like extra beds, early check-in, etc."></textarea>
-                        </div>
-
-                        <div class="form-actions">
-                            <button type="submit" class="btn-submit-form">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z"/></svg>
-                                Send WhatsApp Inquiry
-                            </button>
-                            <a href="tel:+918486627950" class="btn-call-direct">
-                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                                Call
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- --- DEEP FOREST FOOTER --- -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
@@ -3329,32 +3017,7 @@
             }
         }
 
-        // 8. WHATSAPP FORM & ROOM BOOKING BUTTONS
-        function bookRoom(roomName) {
-            const baseText = `Hi Alpine Nest! I'd like to book/inquire about the ${roomName}. Please let me know the availability.`;
-            const url = `https://api.whatsapp.com/send?phone=918486627950&text=${encodeURIComponent(baseText)}`;
-            window.open(url, '_blank');
-        }
 
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            
-            const checkin = document.getElementById('checkin').value;
-            const checkout = document.getElementById('checkout').value;
-            const guests = document.getElementById('guests').value;
-            const room = document.getElementById('room-select').value;
-            const extraMessage = document.getElementById('message').value;
-
-            const text = `Hi Alpine Nest! I want to submit a booking inquiry:\n` +
-                         `- *Room Category:* ${room}\n` +
-                         `- *Check-In:* ${checkin}\n` +
-                         `- *Check-Out:* ${checkout}\n` +
-                         `- *Guests:* ${guests}\n` +
-                         (extraMessage ? `- *Special Note:* ${extraMessage}` : "");
-
-            const url = `https://api.whatsapp.com/send?phone=918486627950&text=${encodeURIComponent(text)}`;
-            window.open(url, '_blank');
-        }
 
         // --- BOOKING MODAL TRIGGERS AND CONFIG ---
         let selectedRoomName = "";
