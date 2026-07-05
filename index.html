@@ -1931,6 +1931,38 @@
             }
             .tile-text-wrapper p {
                 font-size: 11px;
+        }
+
+        /* --- MOBILE LOCATION BUTTON FIXES --- */
+        @media (max-width: 768px) {
+            .location-actions {
+                display: flex;
+                gap: 12px;
+                flex-wrap: nowrap;
+            }
+
+            .location-actions .btn {
+                flex: 1;
+                min-width: 0;
+                height: 52px;
+                padding: 0 14px;
+                font-size: 12px;
+                white-space: nowrap;
+                border-radius: 999px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .location-actions {
+                flex-direction: column;
+            }
+
+            .location-actions .btn {
+                width: 100%;
             }
         }
     </style>
@@ -2591,8 +2623,8 @@
                     <h2 class="location-title">Find Us in <span>Dibrugarh</span></h2>
                     <p class="location-desc">Located in the tranquil yet accessible residential zones of Dibrugarh, Assam. Perfect base for exploring local tea gardens, corporate visits, family reunions, or transit stays near business hubs.</p>
                     <div class="location-actions">
-                        <a href="https://maps.app.goo.gl/cYDumAU53dBCifBR8" target="_blank" class="btn-primary">Open Google Maps</a>
-                        <a href="tel:+918486627950" class="btn-secondary">Call for Directions</a>
+                        <a href="https://maps.app.goo.gl/cYDumAU53dBCifBR8" target="_blank" class="btn btn-primary">Open Google Maps</a>
+                        <a href="tel:+918486627950" class="btn btn-secondary">Call for Directions</a>
                     </div>
                 </div>
                 <div class="map-wrapper">
