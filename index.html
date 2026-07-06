@@ -88,6 +88,14 @@
             padding: 0 24px;
         }
 
+        /* --- SECTION SPACING --- */
+        #about, #why-choose-us, #rooms, #amenities, #location, #rules {
+            padding: 115px 0;
+        }
+        #gallery {
+            padding: 155px 0 115px 0; /* Extra 40px top space for gallery heading */
+        }
+
         /* --- FLOATING PILL NAVBAR --- */
         header {
             position: fixed;
@@ -135,8 +143,8 @@
         }
 
         .nav-logo img {
-            width: 48px;
-            height: 48px;
+            width: 52px; /* Increased from 48px */
+            height: 52px; /* Increased from 48px */
             border-radius: 50%;
             object-fit: cover;
             border: 1.5px solid rgba(93, 122, 85, 0.35);
@@ -145,7 +153,7 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 22px; /* Reduced from 28px */
             list-style: none;
         }
 
@@ -280,8 +288,8 @@
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 60px;
+            grid-template-columns: 48% 44%;
+            justify-content: space-between;
             align-items: center;
         }
 
@@ -296,13 +304,6 @@
             text-transform: uppercase;
             color: var(--accent-secondary);
             margin-bottom: 20px;
-        }
-
-        .hero-label::before {
-            content: "";
-            width: 24px;
-            height: 1px;
-            background: var(--accent-secondary);
         }
 
         .hero-title {
@@ -348,13 +349,15 @@
             font-weight: 700;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            padding: 18px 36px;
+            height: 54px;
+            padding: 0 36px;
             border-radius: var(--radius-pill);
             border: 1px solid transparent;
             cursor: pointer;
             box-shadow: 0 10px 25px rgba(79, 101, 77, 0.2);
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             transition: var(--transition-smooth);
         }
@@ -373,13 +376,16 @@
             font-weight: 700;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            padding: 18px 36px;
+            height: 54px;
+            padding: 0 36px;
             border-radius: var(--radius-pill);
             border: 1.5px solid rgba(93, 122, 85, 0.3);
             cursor: pointer;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
+            transition: var(--transition-smooth);
         }
 
         .btn-secondary:hover {
@@ -416,13 +422,14 @@
         /* Hero Image Layout (Layered & Structured Stack) */
         .hero-image-wrapper {
             position: relative;
-            height: 420px;
+            height: 500px;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             perspective: 1000px;
             margin-top: 10px;
+            left: -35px; /* Shifting stack slightly left to balance and reduce right-side empty space */
         }
 
         .hero-card {
@@ -433,8 +440,8 @@
             background-color: var(--bg-secondary);
             border: 1px solid rgba(255, 255, 255, 0.5);
             cursor: pointer;
-            width: 260px;
-            height: 360px;
+            width: 320px;
+            height: 440px;
             transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), 
                         opacity 0.5s ease,
                         box-shadow 0.5s ease;
@@ -507,7 +514,6 @@
 
         /* --- ABOUT US SECTION --- */
         #about {
-            padding: 120px 0;
             background: linear-gradient(135deg, rgba(79, 101, 77, 0.04) 0%, rgba(248, 247, 242, 0.6) 100%);
             position: relative;
         }
@@ -522,7 +528,7 @@
         /* 2 overlapping portrait image cards */
         .about-collage {
             position: relative;
-            height: 480px;
+            height: 540px;
             width: 100%;
         }
 
@@ -547,16 +553,16 @@
         }
 
         .card-top {
-            width: 270px;
-            height: 350px;
+            width: 310px;
+            height: 400px;
             top: 0;
             left: 10px;
             z-index: 2;
         }
 
         .card-bottom {
-            width: 250px;
-            height: 320px;
+            width: 290px;
+            height: 370px;
             bottom: 0;
             right: 10px;
             z-index: 3;
@@ -630,7 +636,6 @@
 
         /* --- WHY CHOOSE US / FEATURE GRID --- */
         #why-choose-us {
-            padding: 120px 0;
             background: var(--bg-primary);
         }
 
@@ -663,9 +668,10 @@
 
         /* Premium Apple-Style Feature Grid */
         .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
             max-width: 1180px;
             margin: 0 auto;
         }
@@ -675,6 +681,7 @@
             border-radius: 28px;
             border: 1px solid rgba(79, 101, 77, 0.12);
             padding: 34px;
+            width: calc(33.333% - 16px);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -715,7 +722,6 @@
 
         /* --- ROOMS SECTION --- */
         #rooms {
-            padding: 120px 0;
             background: var(--bg-secondary);
         }
 
@@ -842,7 +848,7 @@
 
         /* Room Body info */
         .room-body {
-            padding: 32px;
+            padding: 32px 32px 10px 32px; /* Reduced bottom padding by 22px */
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -864,15 +870,6 @@
             color: var(--accent-primary);
         }
 
-        .room-units {
-            font-size: 12px;
-            color: var(--text-muted);
-            background: rgba(93, 122, 85, 0.08);
-            padding: 4px 12px;
-            border-radius: var(--radius-pill);
-            font-weight: 500;
-        }
-
         .room-title {
             font-size: 28px;
             color: var(--text-primary);
@@ -883,18 +880,21 @@
             display: flex;
             align-items: baseline;
             gap: 4px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .room-price {
             font-family: 'Montserrat', sans-serif;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 800;
             color: var(--accent-secondary);
         }
 
         .room-period {
-            font-size: 13px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             color: var(--text-muted);
         }
 
@@ -997,7 +997,6 @@
 
         /* --- AMENITIES SECTION --- */
         #amenities {
-            padding: 120px 0;
             background: var(--bg-primary);
         }
 
@@ -1027,8 +1026,8 @@
         }
 
         .amenity-card .icon-holder {
-            width: 52px;
-            height: 52px;
+            width: 60px; /* Increased from 52px */
+            height: 60px; /* Increased from 52px */
             background: rgba(93, 122, 85, 0.08);
             border-radius: 50%;
             display: flex;
@@ -1038,8 +1037,8 @@
         }
 
         .amenity-card svg {
-            width: 24px;
-            height: 24px;
+            width: 28px; /* Increased from 24px */
+            height: 28px; /* Increased from 24px */
             fill: var(--accent-primary);
         }
 
@@ -1052,7 +1051,6 @@
 
         /* --- FILTERABLE MASONRY GALLERY --- */
         #gallery {
-            padding: 120px 0;
             background: var(--bg-secondary);
         }
 
@@ -1178,19 +1176,18 @@
 
         /* --- LOCATION SECTION --- */
         #location {
-            padding: 120px 0;
             background: var(--bg-primary);
         }
 
         .location-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 40% 60%;
+            gap: 48px;
             align-items: center;
         }
 
         .location-info {
-            padding-right: 20px;
+            padding-right: 10px;
         }
 
         .location-title {
@@ -1218,7 +1215,7 @@
         .map-wrapper {
             border-radius: var(--radius-card);
             overflow: hidden;
-            height: 440px;
+            height: 420px; /* Adjusting map height to 420px on desktop */
             box-shadow: 0 20px 50px rgba(14, 21, 18, 0.08);
             border: 1px solid rgba(93, 122, 85, 0.15);
             position: relative;
@@ -1232,14 +1229,13 @@
 
         /* --- HOUSE RULES ACCORDION --- */
         #rules {
-            padding: 120px 0;
             background: var(--bg-secondary);
         }
 
         .rules-grid {
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 80px;
+            grid-template-columns: 38% 62%;
+            gap: 48px; /* Reduced from 80px */
             align-items: flex-start;
         }
 
@@ -1328,6 +1324,7 @@
             color: var(--text-light);
             padding: 80px 0 40px;
             position: relative;
+            margin-top: 90px; /* Breathing space before footer on desktop */
         }
 
         .footer-grid {
@@ -1493,6 +1490,7 @@
 
             .hero-image-wrapper {
                 height: 400px;
+                left: 0;
             }
 
             .about-grid {
@@ -1501,7 +1499,13 @@
             }
 
             .feature-grid {
-                grid-template-columns: repeat(2, 1fr);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .feature-card {
+                width: calc(50% - 10px);
             }
 
             .rooms-grid {
@@ -1539,6 +1543,13 @@
         }
 
         @media (max-width: 768px) {
+            #about, #why-choose-us, #rooms, #amenities, #location, #rules {
+                padding: 70px 0 !important;
+            }
+            #gallery {
+                padding: 110px 0 70px 0 !important;
+            }
+
             .nav-links, .btn-nav-book {
                 display: none;
             }
@@ -1571,6 +1582,10 @@
                     padding: 14px 20px !important;
                     border-radius: 18px !important;
                 }
+                .amenities-grid {
+                    grid-template-columns: 1fr !important;
+                    gap: 14px !important;
+                }
             }
 
             .amenities-grid {
@@ -1584,6 +1599,10 @@
 
             .form-actions {
                 grid-template-columns: 1fr;
+            }
+
+            footer {
+                margin-top: 50px !important; /* Breathing space before footer on mobile */
             }
 
             .footer-grid {
@@ -1608,6 +1627,7 @@
             }
 
             .feature-card {
+                width: 100% !important;
                 padding: 22px !important;
                 border-radius: 24px;
                 min-height: auto !important;
@@ -1632,9 +1652,6 @@
             }
 
             /* Mobile About grid overrides */
-            #about {
-                padding: 60px 0 80px !important;
-            }
 
             .about-grid {
                 display: flex;
@@ -1937,6 +1954,7 @@
             }
             .tile-text-wrapper p {
                 font-size: 11px;
+            }
         }
 
         /* --- MOBILE LOCATION BUTTON FIXES --- */
@@ -1944,9 +1962,10 @@
             .location-actions {
                 flex-direction: column;
                 gap: 12px;
+                width: 100%;
             }
 
-            .location-actions .btn {
+            .location-actions .btn-primary, .location-actions .btn-secondary {
                 width: 100%;
                 height: 54px;
                 padding: 0 22px;
@@ -1957,6 +1976,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                box-sizing: border-box;
+            }
+
+            .map-wrapper {
+                height: 320px !important;
             }
         }
     </style>
@@ -2692,7 +2716,7 @@
             
             <div class="modal-options-stack">
                 <!-- Option 1: WhatsApp Tile -->
-                <div class="modal-tile-btn whatsapp-tile" onclick="handleWhatsAppBookingClick()">
+                <a href="#" class="modal-tile-btn whatsapp-tile" onclick="handleWhatsAppBookingClick(event)">
                     <div class="tile-icon-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z"/></svg>
                     </div>
@@ -2701,7 +2725,7 @@
                         <p>Chat with us and confirm availability</p>
                         <span class="tile-number">+91 84866 27950</span>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Option 2: Call Main Tile -->
                 <a href="tel:+918486627950" class="modal-tile-btn call-tile" onclick="closeBookingModal()">
@@ -2722,7 +2746,7 @@
                     </div>
                     <div class="tile-text-wrapper">
                         <h3>Call Alternative Number</h3>
-                        <p>Alternate line for reservation support</p>
+                        <p>Reach us on our alternate helpline</p>
                         <span class="tile-number">+91 96787 84771</span>
                     </div>
                 </a>
@@ -3105,7 +3129,10 @@
             document.body.style.overflow = '';
         }
 
-        function handleWhatsAppBookingClick() {
+        function handleWhatsAppBookingClick(e) {
+            if (e) {
+                e.preventDefault();
+            }
             let message = "Hi Alpine Nest Homestay, I want to book a stay. Please share availability and details.";
             if (selectedRoomName) {
                 message = `Hi Alpine Nest Homestay, I want to book ${selectedRoomName}. Please share availability and details.`;
