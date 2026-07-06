@@ -116,8 +116,8 @@
 
         .nav-pill {
             background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid var(--glass-border);
             border-radius: var(--radius-pill);
             padding: 10px 24px;
@@ -465,7 +465,7 @@
             transform: translateX(0) scale(1) rotate(0deg);
             z-index: 10;
             opacity: 1;
-            box-shadow: 0 25px 55px rgba(14, 21, 18, 0.15);
+            box-shadow: 0 18px 45px rgba(14, 21, 18, 0.08);
         }
 
         .pos-right {
@@ -574,12 +574,12 @@
         /* Glassmorphism content card */
         .about-glass-card {
             background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.6);
             border-radius: 36px;
             padding: 48px;
-            box-shadow: 0 20px 50px rgba(14, 21, 18, 0.04);
+            box-shadow: 0 16px 40px rgba(14, 21, 18, 0.03);
         }
 
         .about-title {
@@ -1864,7 +1864,7 @@
         .modal-container {
             background: var(--bg-primary);
             border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 30px 60px rgba(14, 21, 18, 0.15);
+            box-shadow: 0 20px 45px rgba(14, 21, 18, 0.08);
             border-radius: 36px;
             padding: 48px;
             max-width: 520px;
@@ -2126,6 +2126,18 @@
             .map-wrapper {
                 height: 320px !important;
             }
+
+            .about-glass-card, .nav-pill {
+                backdrop-filter: blur(10px) !important;
+                -webkit-backdrop-filter: blur(10px) !important;
+            }
+        }
+
+        /* Disable expensive hover translations on touch devices */
+        @media (hover: none) {
+            .btn-primary:hover, .btn-secondary:hover, .room-card:hover, .feature-card:hover, .about-collage-card:hover, .carousel-arrow:hover, .nav-links a:hover, .btn-room-whatsapp:hover, .btn-gallery-toggle:hover {
+                transform: none !important;
+            }
         }
     </style>
 </head>
@@ -2136,7 +2148,7 @@
         <div class="container">
             <nav class="nav-pill">
                 <a href="#hero" class="nav-logo">
-                    <img src="photos/alpinenestlogo.jpg" alt="Alpine Nest Logo">
+                    <img src="photos/alpinenestlogo.jpg" alt="Alpine Nest Logo" width="52" height="52" decoding="async">
                     <span>Alpine Nest</span>
                 </a>
                 <ul class="nav-links">
@@ -2214,13 +2226,13 @@
                     <div class="hero-image-wrapper">
                         <!-- Dynamic interactive stack layout -->
                         <div class="hero-card hero-preview-card pos-left is-left" data-pos="left" data-room="skyline" data-tilt-factor="0.4">
-                            <img src="photos/skylinesuite3.jpg" alt="Skyline Suite">
+                            <img src="photos/skylinesuite3.jpg" alt="Skyline Suite" width="320" height="440" decoding="async">
                         </div>
                         <div class="hero-card hero-preview-card pos-center is-active" data-pos="center" data-room="capsule" data-tilt-factor="0.2">
-                            <img src="photos/capsule4.jpg" alt="Capsule Studio">
+                            <img src="photos/capsule4.jpg" alt="Capsule Studio" width="320" height="440" decoding="async">
                         </div>
                         <div class="hero-card hero-preview-card pos-right is-right" data-pos="right" data-room="2bhk" data-tilt-factor="0.4">
-                            <img src="photos/2bhk5.jpg" alt="Cozy 2BHK">
+                            <img src="photos/2bhk5.jpg" alt="Cozy 2BHK" width="320" height="440" decoding="async">
                         </div>
                     </div>
                     <!-- Interaction indicators for mobile stack -->
@@ -2245,10 +2257,10 @@
                 <!-- 2 overlapping image cards -->
                 <div class="about-collage">
                     <div class="about-collage-card card-top">
-                        <img src="photos/skylinesuite5.jpg" alt="Skyline Suite Interior">
+                        <img src="photos/skylinesuite5.jpg" alt="Skyline Suite Interior" width="310" height="400" loading="lazy" decoding="async">
                     </div>
                     <div class="about-collage-card card-bottom">
-                        <img src="photos/capsule2.jpg" alt="Capsule Room Layout">
+                        <img src="photos/capsule2.jpg" alt="Capsule Room Layout" width="290" height="370" loading="lazy" decoding="async">
                     </div>
                 </div>
                 
@@ -2358,13 +2370,13 @@
                 <div class="room-card" id="room-skyline">
                     <div class="room-carousel" data-carousel-id="skyline">
                         <div class="carousel-slides">
-                            <div class="carousel-slide"><img src="photos/skylinesuite4.jpg" alt="Skyline Suite Main"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite5.jpg" alt="Skyline Suite Bed"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite1.jpg" alt="Skyline Suite Lounge"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite2.jpg" alt="Skyline Suite Dining"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite3.jpg" alt="Skyline Suite Window"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite6.jpg" alt="Skyline Suite Kitchen"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite7.jpg" alt="Skyline Suite Bath"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite4.jpg" alt="Skyline Suite Main" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite5.jpg" alt="Skyline Suite Bed" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite1.jpg" alt="Skyline Suite Lounge" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite2.jpg" alt="Skyline Suite Dining" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite3.jpg" alt="Skyline Suite Window" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite6.jpg" alt="Skyline Suite Kitchen" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite7.jpg" alt="Skyline Suite Bath" width="600" height="400" loading="lazy" decoding="async"></div>
                         </div>
                         <button class="carousel-arrow arrow-prev" aria-label="Previous Slide">
                             <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
@@ -2409,11 +2421,11 @@
                 <div class="room-card" id="room-capsule">
                     <div class="room-carousel" data-carousel-id="capsule">
                         <div class="carousel-slides">
-                            <div class="carousel-slide"><img src="photos/capsule1.jpg" alt="Capsule Studio Main"></div>
-                            <div class="carousel-slide"><img src="photos/capsule2.jpg" alt="Capsule Studio Interior"></div>
-                            <div class="carousel-slide"><img src="photos/capsule3.jpg" alt="Capsule Studio Bed View"></div>
-                            <div class="carousel-slide"><img src="photos/capsule4.jpg" alt="Capsule Studio Kitchen Layout"></div>
-                            <div class="carousel-slide"><img src="photos/capsule5.jpg" alt="Capsule Studio Shower"></div>
+                            <div class="carousel-slide"><img src="photos/capsule1.jpg" alt="Capsule Studio Main" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/capsule2.jpg" alt="Capsule Studio Interior" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/capsule3.jpg" alt="Capsule Studio Bed View" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/capsule4.jpg" alt="Capsule Studio Kitchen Layout" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/capsule5.jpg" alt="Capsule Studio Shower" width="600" height="400" loading="lazy" decoding="async"></div>
                         </div>
                         <button class="carousel-arrow arrow-prev" aria-label="Previous Slide">
                             <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
@@ -2460,13 +2472,13 @@
                 <div class="room-card" id="room-2bhk">
                     <div class="room-carousel" data-carousel-id="2bhk">
                         <div class="carousel-slides">
-                            <div class="carousel-slide"><img src="photos/2bhk1.jpg" alt="Cozy 2BHK Main Living"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk2.jpg" alt="Cozy 2BHK Master Bedroom"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk3.jpg" alt="Cozy 2BHK Second Bed"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk4.jpg" alt="Cozy 2BHK Sofa Space"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk5.jpg" alt="Cozy 2BHK Dining Setup"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk6.jpg" alt="Cozy 2BHK Kitchen"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk7.jpg" alt="Cozy 2BHK Bathroom"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk1.jpg" alt="Cozy 2BHK Main Living" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk2.jpg" alt="Cozy 2BHK Master Bedroom" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk3.jpg" alt="Cozy 2BHK Second Bed" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk4.jpg" alt="Cozy 2BHK Sofa Space" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk5.jpg" alt="Cozy 2BHK Dining Setup" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk6.jpg" alt="Cozy 2BHK Kitchen" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk7.jpg" alt="Cozy 2BHK Bathroom" width="600" height="400" loading="lazy" decoding="async"></div>
                         </div>
                         <button class="carousel-arrow arrow-prev" aria-label="Previous Slide">
                             <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
@@ -2611,65 +2623,65 @@
             <div class="gallery-grid">
                 <!-- Skyline Suite Photos -->
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite1.jpg" alt="Skyline Room Lounge Style">
+                    <img src="photos/skylinesuite1.jpg" alt="Skyline Room Lounge Style" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite2.jpg" alt="Skyline Room Dining Setup">
+                    <img src="photos/skylinesuite2.jpg" alt="Skyline Room Dining Setup" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite3.jpg" alt="Skyline Room Glass Panel View">
+                    <img src="photos/skylinesuite3.jpg" alt="Skyline Room Glass Panel View" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite4.jpg" alt="Skyline Room Master Bed">
+                    <img src="photos/skylinesuite4.jpg" alt="Skyline Room Master Bed" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite5.jpg" alt="Skyline Room Seating Area">
+                    <img src="photos/skylinesuite5.jpg" alt="Skyline Room Seating Area" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite6.jpg" alt="Skyline Room Modular Kitchen">
+                    <img src="photos/skylinesuite6.jpg" alt="Skyline Room Modular Kitchen" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite7.jpg" alt="Skyline Room Premium Bathroom">
+                    <img src="photos/skylinesuite7.jpg" alt="Skyline Room Premium Bathroom" width="400" height="300" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Capsule Studio Photos -->
                 <div class="gallery-item" data-category="capsule">
-                    <img src="photos/capsule1.jpg" alt="Capsule Studio Living layout">
+                    <img src="photos/capsule1.jpg" alt="Capsule Studio Living layout" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="capsule">
-                    <img src="photos/capsule2.jpg" alt="Capsule Studio Circular mirror styling">
+                    <img src="photos/capsule2.jpg" alt="Capsule Studio Circular mirror styling" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="capsule">
-                    <img src="photos/capsule3.jpg" alt="Capsule Studio Cozy Bed details">
+                    <img src="photos/capsule3.jpg" alt="Capsule Studio Cozy Bed details" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="capsule">
-                    <img src="photos/capsule4.jpg" alt="Capsule Studio Kitchen stove area">
+                    <img src="photos/capsule4.jpg" alt="Capsule Studio Kitchen stove area" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="capsule">
-                    <img src="photos/capsule5.jpg" alt="Capsule Studio Bath fittings">
+                    <img src="photos/capsule5.jpg" alt="Capsule Studio Bath fittings" width="400" height="300" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Cozy 2BHK Photos -->
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk1.jpg" alt="Cozy 2BHK Main Living setup">
+                    <img src="photos/2bhk1.jpg" alt="Cozy 2BHK Main Living setup" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk2.jpg" alt="Cozy 2BHK Master Bedroom View">
+                    <img src="photos/2bhk2.jpg" alt="Cozy 2BHK Master Bedroom View" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk3.jpg" alt="Cozy 2BHK Guest Room setup">
+                    <img src="photos/2bhk3.jpg" alt="Cozy 2BHK Guest Room setup" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk4.jpg" alt="Cozy 2BHK Corner desk seating">
+                    <img src="photos/2bhk4.jpg" alt="Cozy 2BHK Corner desk seating" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk5.jpg" alt="Cozy 2BHK Dining corner details">
+                    <img src="photos/2bhk5.jpg" alt="Cozy 2BHK Dining corner details" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk6.jpg" alt="Cozy 2BHK Full Kitchen appliances">
+                    <img src="photos/2bhk6.jpg" alt="Cozy 2BHK Full Kitchen appliances" width="400" height="300" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk7.jpg" alt="Cozy 2BHK Clean Bathroom styling">
+                    <img src="photos/2bhk7.jpg" alt="Cozy 2BHK Clean Bathroom styling" width="400" height="300" loading="lazy" decoding="async">
                 </div>
             </div>
             
@@ -2934,8 +2946,19 @@
         // 2. NAVBAR SCROLL EFFECT
         let lastScroll = 0;
         const header = document.getElementById('header');
+        let scrollTicking = false;
 
         window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                window.requestAnimationFrame(() => {
+                    handleNavbarScroll();
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        }, { passive: true });
+
+        function handleNavbarScroll() {
             const currentScroll = window.pageYOffset;
 
             // Scrolled styling
@@ -2955,7 +2978,7 @@
             }
             
             lastScroll = currentScroll;
-        });
+        }
 
         // 3. ROOM CAROUSELS STATE & CONTROLLER
         const carousels = {};
@@ -2968,16 +2991,9 @@
                 const dotsContainer = carouselEl.querySelector('.carousel-dots');
                 const prevBtn = carouselEl.querySelector('.arrow-prev');
                 const nextBtn = carouselEl.querySelector('.arrow-next');
+                const dots = [];
                 
-                carousels[id] = {
-                    current: 0,
-                    total: slideCount,
-                    element: slides,
-                    prevBtn: prevBtn,
-                    nextBtn: nextBtn
-                };
-
-                // Create Dots
+                // Create Dots and cache them
                 for (let i = 0; i < slideCount; i++) {
                     const dot = document.createElement('div');
                     dot.classList.add('carousel-dot');
@@ -2988,7 +3004,17 @@
                         gotoSlide(id, i);
                     });
                     dotsContainer.appendChild(dot);
+                    dots.push(dot);
                 }
+
+                carousels[id] = {
+                    current: 0,
+                    total: slideCount,
+                    element: slides,
+                    prevBtn: prevBtn,
+                    nextBtn: nextBtn,
+                    dots: dots
+                };
 
                 // Attach button listeners
                 if (prevBtn) {
@@ -3013,11 +3039,11 @@
 
         function updateCarousel(id) {
             const state = carousels[id];
-            state.element.style.transform = `translateX(-${state.current * 100}%)`;
+            // Hardware acceleration using translate3d
+            state.element.style.transform = `translate3d(-${state.current * 100}%, 0, 0)`;
             
-            // Update dots
-            const dots = state.element.parentElement.querySelectorAll('.carousel-dot');
-            dots.forEach((dot, index) => {
+            // Update dots from cached array to prevent layout recalculation
+            state.dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === state.current);
             });
 
@@ -3118,6 +3144,9 @@
                 // Clear active mousemove transforms to let transitions animate smoothly
                 card.style.transform = '';
                 
+                // Optimize rendering during animation
+                card.style.willChange = 'transform, opacity';
+                
                 if (roomIdx === activeHeroIndex) {
                     card.className = 'hero-card hero-preview-card pos-center is-active';
                     card.setAttribute('data-pos', 'center');
@@ -3128,6 +3157,11 @@
                     card.className = 'hero-card hero-preview-card pos-right is-right';
                     card.setAttribute('data-pos', 'right');
                 }
+                
+                // Remove will-change after transition finishes to save memory
+                setTimeout(() => {
+                    card.style.willChange = 'auto';
+                }, 650);
             });
             
             // Sync active state indicators
@@ -3261,13 +3295,16 @@
             }
         }
 
-        // Run on load and resize
+        // Run on load and resize (debounced resize to improve scrolling performance)
         window.addEventListener('DOMContentLoaded', () => {
             updateGalleryView();
         });
+        
+        let galleryResizeTimeout;
         window.addEventListener('resize', () => {
-            updateGalleryView();
-        });
+            clearTimeout(galleryResizeTimeout);
+            galleryResizeTimeout = setTimeout(updateGalleryView, 150);
+        }, { passive: true });
 
         // 7. HOUSE RULES ACCORDION LOGIC
         function toggleAccordion(header) {
