@@ -1583,40 +1583,54 @@
                 margin-bottom: 28px !important;
             }
 
+            .hero-visual {
+                height: 370px !important;
+                margin-top: 18px !important;
+                overflow: visible !important;
+            }
+
             .hero-image-wrapper {
-                height: 350px !important;
-                margin-top: 10px !important;
+                height: 340px !important;
+                margin-top: 0 !important;
                 left: 0 !important;
+                overflow: visible !important;
             }
 
-            .hero-card.pos-center {
-                width: 72vw !important;
-                max-width: 300px !important;
-                height: 330px !important;
+            .hero-preview-card.is-active {
+                width: 74vw !important;
+                max-width: 315px !important;
+                height: 340px !important;
+                transform: translateX(0) scale(1) !important;
+                opacity: 1 !important;
+                z-index: 5 !important;
             }
 
-            .hero-card.pos-left, .hero-card.pos-right {
-                width: 54vw !important;
-                height: 270px !important;
+            .hero-preview-card.is-left {
+                width: 58vw !important;
+                height: 285px !important;
+                transform: translateX(-34%) scale(.86) !important;
+                opacity: .85 !important;
+                z-index: 3 !important;
             }
 
-            .pos-left {
-                transform: translateX(-45px) scale(1) rotate(-3deg) !important;
+            .hero-preview-card.is-right {
+                width: 58vw !important;
+                height: 285px !important;
+                transform: translateX(34%) scale(.86) !important;
+                opacity: .85 !important;
+                z-index: 3 !important;
             }
 
-            .pos-center {
-                transform: translateX(0) scale(1) rotate(0deg) !important;
-            }
-
-            .pos-right {
-                transform: translateX(45px) scale(1) rotate(3deg) !important;
+            .hero-preview-card {
+                transition: transform 650ms cubic-bezier(.22,.61,.36,1), opacity 650ms ease !important;
+                cursor: pointer;
             }
 
             .hero-photo-hint {
                 display: inline-flex !important;
                 align-items: center;
                 justify-content: center;
-                margin: 16px auto 0 !important;
+                margin: 12px auto 0 !important; /* Closer to the image stack */
                 padding: 8px 16px !important;
                 border-radius: var(--radius-pill) !important;
                 font-size: 12px !important;
@@ -2199,13 +2213,13 @@
                 <div class="hero-visual">
                     <div class="hero-image-wrapper">
                         <!-- Dynamic interactive stack layout -->
-                        <div class="hero-card pos-left" data-pos="left" data-room="skyline" data-tilt-factor="0.4">
+                        <div class="hero-card hero-preview-card pos-left is-left" data-pos="left" data-room="skyline" data-tilt-factor="0.4">
                             <img src="photos/skylinesuite3.jpg" alt="Skyline Suite">
                         </div>
-                        <div class="hero-card pos-center" data-pos="center" data-room="capsule" data-tilt-factor="0.2">
+                        <div class="hero-card hero-preview-card pos-center is-active" data-pos="center" data-room="capsule" data-tilt-factor="0.2">
                             <img src="photos/capsule4.jpg" alt="Capsule Studio">
                         </div>
-                        <div class="hero-card pos-right" data-pos="right" data-room="2bhk" data-tilt-factor="0.4">
+                        <div class="hero-card hero-preview-card pos-right is-right" data-pos="right" data-room="2bhk" data-tilt-factor="0.4">
                             <img src="photos/2bhk5.jpg" alt="Cozy 2BHK">
                         </div>
                     </div>
@@ -3088,81 +3102,90 @@
         }
 
         // 9. PREMIUM HERO IN-PLACE DECK INTERACTION & AUTO-ROTATION
+        const rooms = ['skyline', 'capsule', '2bhk'];
+        let activeHeroIndex = 1; // Capsule Studio is active by default
         const heroCards = document.querySelectorAll('.hero-card');
         const heroIndicators = document.querySelectorAll('.hero-indicator');
-        let autoPlayInterval = setInterval(rotateHeroCards, 4000);
+        
+        let autoplayTimer = setInterval(nextHeroImage, 4000);
+        let resumeTimer = null;
 
-        function updateHeroIndicators() {
-            const activeCard = document.querySelector('.hero-card[data-pos="center"]');
-            if (!activeCard) return;
-            const room = activeCard.getAttribute('data-room');
+        function updateHeroDeck() {
+            heroCards.forEach(card => {
+                const roomName = card.getAttribute('data-room');
+                const roomIdx = rooms.indexOf(roomName);
+                
+                // Clear active mousemove transforms to let transitions animate smoothly
+                card.style.transform = '';
+                
+                if (roomIdx === activeHeroIndex) {
+                    card.className = 'hero-card hero-preview-card pos-center is-active';
+                    card.setAttribute('data-pos', 'center');
+                } else if (roomIdx === (activeHeroIndex - 1 + 3) % 3) {
+                    card.className = 'hero-card hero-preview-card pos-left is-left';
+                    card.setAttribute('data-pos', 'left');
+                } else if (roomIdx === (activeHeroIndex + 1) % 3) {
+                    card.className = 'hero-card hero-preview-card pos-right is-right';
+                    card.setAttribute('data-pos', 'right');
+                }
+            });
+            
+            // Sync active state indicators
+            const currentActiveRoom = rooms[activeHeroIndex];
             heroIndicators.forEach(ind => {
-                ind.classList.toggle('active', ind.getAttribute('data-slide') === room);
+                ind.classList.toggle('active', ind.getAttribute('data-slide') === currentActiveRoom);
             });
         }
 
-        function switchCards(card) {
-            const currentPos = card.getAttribute('data-pos');
-            if (currentPos === 'center') return;
-            
-            let leftCard, centerCard, rightCard;
-            heroCards.forEach(c => {
-                const pos = c.getAttribute('data-pos');
-                if (pos === 'left') leftCard = c;
-                if (pos === 'center') centerCard = c;
-                if (pos === 'right') rightCard = c;
-            });
-            
-            // Reset tilt styles to prevent jumpy layout during animation
-            heroCards.forEach(c => c.style.transform = '');
-
-            if (currentPos === 'left') {
-                leftCard.className = 'hero-card pos-center';
-                leftCard.setAttribute('data-pos', 'center');
-                centerCard.className = 'hero-card pos-right';
-                centerCard.setAttribute('data-pos', 'right');
-                rightCard.className = 'hero-card pos-left';
-                rightCard.setAttribute('data-pos', 'left');
-            } else if (currentPos === 'right') {
-                rightCard.className = 'hero-card pos-center';
-                rightCard.setAttribute('data-pos', 'center');
-                centerCard.className = 'hero-card pos-left';
-                centerCard.setAttribute('data-pos', 'left');
-                leftCard.className = 'hero-card pos-right';
-                leftCard.setAttribute('data-pos', 'right');
-            }
-            
-            updateHeroIndicators();
+        function nextHeroImage() {
+            activeHeroIndex = (activeHeroIndex + 1) % 3;
+            updateHeroDeck();
         }
 
-        function rotateHeroCards() {
-            const rightCard = document.querySelector('.hero-card[data-pos="right"]');
-            if (rightCard) {
-                switchCards(rightCard);
+        function handleInteraction(index) {
+            // Clear autoplay interval immediately
+            clearInterval(autoplayTimer);
+            
+            // Clear any active resume timeout
+            if (resumeTimer) {
+                clearTimeout(resumeTimer);
             }
+            
+            // If it's a different room, change index and update deck
+            if (activeHeroIndex !== index) {
+                activeHeroIndex = index;
+                updateHeroDeck();
+            }
+            
+            // Setup a timeout to resume autoplay after 6 seconds
+            resumeTimer = setTimeout(() => {
+                autoplayTimer = setInterval(nextHeroImage, 4000);
+            }, 6000);
         }
 
         heroCards.forEach(card => {
             card.addEventListener('click', () => {
-                clearInterval(autoPlayInterval); // Pause auto-change permanently when user interacts
-                switchCards(card);
+                const roomName = card.getAttribute('data-room');
+                const roomIdx = rooms.indexOf(roomName);
+                if (roomIdx !== -1) {
+                    handleInteraction(roomIdx);
+                }
             });
         });
 
         heroIndicators.forEach(ind => {
             ind.addEventListener('click', () => {
-                clearInterval(autoPlayInterval); // Pause auto-change permanently when user interacts
-                const targetRoom = ind.getAttribute('data-slide');
-                const targetCard = document.querySelector(`.hero-card[data-room="${targetRoom}"]`);
-                if (targetCard) {
-                    switchCards(targetCard);
+                const slideName = ind.getAttribute('data-slide');
+                const roomIdx = rooms.indexOf(slideName);
+                if (roomIdx !== -1) {
+                    handleInteraction(roomIdx);
                 }
             });
         });
 
-        // Initialize indicator state on load
+        // Initialize state on DOM load
         window.addEventListener('DOMContentLoaded', () => {
-            updateHeroIndicators();
+            updateHeroDeck();
         });
 
         // 6. GALLERY FILTER & EXPANSION LOGIC
