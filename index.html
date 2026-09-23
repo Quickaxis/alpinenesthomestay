@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpine Nest Homestay | Premium Luxury Stays in Dibrugarh, Assam</title>
-    <meta name="description" content="Stay at Alpine Nest Homestay, Dibrugarh's first capsule-themed luxury homestay. Experience premium 1RK, 1BHK & 2BHK accommodations with private kitchens, workspaces, and modern amenities.">
-    
+    <meta name="description"
+        content="Stay at Alpine Nest Homestay, Dibrugarh's first capsule-themed luxury homestay. Experience premium 1RK, 1BHK & 2BHK accommodations with private kitchens, workspaces, and modern amenities.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
     <style>
         /* --- DESIGN SYSTEM TOKENS --- */
         :root {
             --font-heading: 'Poppins', sans-serif;
             --font-body: 'Poppins', sans-serif;
-            
+
             /* Color Palette */
-            --bg-primary: #F8F7F2;        /* Warm Ivory */
-            --bg-secondary: #FFFFFF;      /* Pure White */
-            --bg-dark-section: #0E1512;   /* Deep Forest Black */
-            --accent-primary: #4F654D;    /* Softer Forest Sage Green */
-            --accent-secondary: #C8972B;  /* Warm Gold */
-            --text-primary: #111A15;      /* Near Black */
-            --text-muted: #3D4A40;        /* Deeper Sage Charcoal */
-            --text-light: #F8F7F2;        /* Light text for dark backgrounds */
-            
+            --bg-primary: #F8F7F2;
+            /* Warm Ivory */
+            --bg-secondary: #FFFFFF;
+            /* Pure White */
+            --bg-dark-section: #0E1512;
+            /* Deep Forest Black */
+            --accent-primary: #4F654D;
+            /* Softer Forest Sage Green */
+            --accent-secondary: #C8972B;
+            /* Warm Gold */
+            --text-primary: #111A15;
+            /* Near Black */
+            --text-muted: #3D4A40;
+            /* Deeper Sage Charcoal */
+            --text-light: #F8F7F2;
+            /* Light text for dark backgrounds */
+
             /* Glassmorphism */
             --glass-bg: rgba(255, 255, 255, 0.45);
             --glass-border: rgba(255, 255, 255, 0.35);
-            
+
             /* Motion & Radius */
             --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             --radius-card: 32px;
@@ -74,7 +86,10 @@
             z-index: 9999;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: var(--font-heading);
             font-weight: 600;
         }
@@ -92,11 +107,18 @@
         }
 
         /* --- SECTION SPACING --- */
-        #about, #why-choose-us, #rooms, #amenities, #location, #rules {
+        #about,
+        #why-choose-us,
+        #rooms,
+        #amenities,
+        #location,
+        #rules {
             padding: 115px 0;
         }
+
         #gallery {
-            padding: 155px 0 115px 0; /* Extra 40px top space for gallery heading */
+            padding: 155px 0 115px 0;
+            /* Extra 40px top space for gallery heading */
         }
 
         /* --- FLOATING PILL NAVBAR --- */
@@ -146,8 +168,10 @@
         }
 
         .nav-logo img {
-            width: 52px; /* Increased from 48px */
-            height: 52px; /* Increased from 48px */
+            width: 52px;
+            /* Increased from 48px */
+            height: 52px;
+            /* Increased from 48px */
             border-radius: 50%;
             object-fit: cover;
             border: 1.5px solid rgba(93, 122, 85, 0.35);
@@ -156,7 +180,8 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 22px; /* Reduced from 28px */
+            gap: 22px;
+            /* Reduced from 28px */
             list-style: none;
         }
 
@@ -234,17 +259,27 @@
             transition: var(--transition-smooth);
         }
 
-        .nav-toggle span:first-child { top: 6px; }
-        .nav-toggle span:nth-child(2) { top: 11px; }
-        .nav-toggle span:last-child { top: 16px; }
+        .nav-toggle span:first-child {
+            top: 6px;
+        }
+
+        .nav-toggle span:nth-child(2) {
+            top: 11px;
+        }
+
+        .nav-toggle span:last-child {
+            top: 16px;
+        }
 
         .nav-toggle.active span:first-child {
             transform: rotate(45deg);
             top: 11px;
         }
+
         .nav-toggle.active span:nth-child(2) {
             opacity: 0;
         }
+
         .nav-toggle.active span:last-child {
             transform: rotate(-45deg);
             top: 11px;
@@ -432,7 +467,8 @@
             justify-content: center;
             perspective: 1000px;
             margin-top: 10px;
-            left: -35px; /* Shifting stack slightly left to balance and reduce right-side empty space */
+            left: -35px;
+            /* Shifting stack slightly left to balance and reduce right-side empty space */
         }
 
         .hero-card {
@@ -445,9 +481,9 @@
             cursor: pointer;
             width: 320px;
             height: 440px;
-            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), 
-                        opacity 0.5s ease,
-                        box-shadow 0.5s ease;
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1),
+                opacity 0.5s ease,
+                box-shadow 0.5s ease;
         }
 
         .hero-card img {
@@ -511,11 +547,13 @@
         }
 
         .hero-photo-hint {
-            display: none; /* Hidden on desktop */
+            display: none;
+            /* Hidden on desktop */
         }
 
         .hero-indicators {
-            display: none; /* Hidden on desktop */
+            display: none;
+            /* Hidden on desktop */
         }
 
         /* --- ABOUT US SECTION --- */
@@ -725,7 +763,7 @@
             width: 100%;
             cursor: grab;
         }
-        
+
         .wcu-carousel-viewport:active {
             cursor: grabbing;
         }
@@ -866,7 +904,8 @@
         }
 
         .wcu-img-slide {
-            flex: 0 0 500px; /* Fixed width on desktop */
+            flex: 0 0 500px;
+            /* Fixed width on desktop */
             margin: 0 12px;
         }
 
@@ -876,7 +915,31 @@
             border-radius: 24px;
             object-fit: cover;
             box-shadow: 0 10px 30px rgba(14, 21, 18, 0.05);
-            pointer-events: none; /* Prevents dragging ghost */
+            pointer-events: none;
+            /* Prevents dragging ghost */
+        }
+
+        @keyframes glideMarquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        #wcuImageCarousel .wcu-carousel-track {
+            display: flex;
+            width: max-content;
+            animation: glideMarquee 40s linear infinite;
+        }
+
+        #wcuImageCarousel .wcu-carousel-viewport {
+            cursor: default;
+        }
+
+        #wcuImageCarousel .wcu-carousel-viewport:active {
+            cursor: default;
         }
 
         /* --- ROOMS SECTION --- */
@@ -954,7 +1017,7 @@
 
         .carousel-arrow:hover {
             background: #FFFFFF;
-            scale: 1.05;
+            transform: translateY(-50%) scale(1.05);
             box-shadow: 0 6px 16px rgba(14, 21, 18, 0.15);
         }
 
@@ -970,8 +1033,13 @@
             fill: var(--text-primary);
         }
 
-        .arrow-prev { left: 16px; }
-        .arrow-next { right: 16px; }
+        .arrow-prev {
+            left: 16px;
+        }
+
+        .arrow-next {
+            right: 16px;
+        }
 
         .carousel-dots {
             position: absolute;
@@ -1007,7 +1075,8 @@
 
         /* Room Body info */
         .room-body {
-            padding: 32px 32px 10px 32px; /* Reduced bottom padding by 22px */
+            padding: 32px 32px 10px 32px;
+            /* Reduced bottom padding by 22px */
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -1104,7 +1173,8 @@
             background: var(--accent-primary);
             color: var(--text-light);
             border: none;
-            height: 48px; /* Matching height explicitly */
+            height: 48px;
+            /* Matching height explicitly */
             border-radius: 16px;
             font-family: var(--font-heading);
             font-size: 11px;
@@ -1130,7 +1200,8 @@
 
         .btn-room-call {
             width: 48px;
-            height: 48px; /* Matching height explicitly */
+            height: 48px;
+            /* Matching height explicitly */
             border-radius: 16px;
             border: 1px solid rgba(79, 101, 77, 0.25);
             background: transparent;
@@ -1185,8 +1256,10 @@
         }
 
         .amenity-card .icon-holder {
-            width: 60px; /* Increased from 52px */
-            height: 60px; /* Increased from 52px */
+            width: 60px;
+            /* Increased from 52px */
+            height: 60px;
+            /* Increased from 52px */
             background: rgba(93, 122, 85, 0.08);
             border-radius: 50%;
             display: flex;
@@ -1196,8 +1269,10 @@
         }
 
         .amenity-card svg {
-            width: 28px; /* Increased from 24px */
-            height: 28px; /* Increased from 24px */
+            width: 28px;
+            /* Increased from 24px */
+            height: 28px;
+            /* Increased from 24px */
             fill: var(--accent-primary);
         }
 
@@ -1236,7 +1311,8 @@
             transition: var(--transition-smooth);
         }
 
-        .filter-btn.active, .filter-btn:hover {
+        .filter-btn.active,
+        .filter-btn:hover {
             background: var(--accent-primary);
             color: var(--text-light);
             border-color: var(--accent-primary);
@@ -1256,7 +1332,8 @@
             aspect-ratio: 4 / 3;
             box-shadow: 0 10px 30px rgba(14, 21, 18, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.5);
-            display: none; /* Controlled by JS */
+            display: none;
+            /* Controlled by JS */
         }
 
         .gallery-item img {
@@ -1281,6 +1358,7 @@
                 opacity: 0;
                 transform: translateY(20px) scale(0.97);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0) scale(1);
@@ -1374,7 +1452,8 @@
         .map-wrapper {
             border-radius: var(--radius-card);
             overflow: hidden;
-            height: 420px; /* Adjusting map height to 420px on desktop */
+            height: 420px;
+            /* Adjusting map height to 420px on desktop */
             box-shadow: 0 20px 50px rgba(14, 21, 18, 0.08);
             border: 1px solid rgba(93, 122, 85, 0.15);
             position: relative;
@@ -1394,7 +1473,8 @@
         .rules-grid {
             display: grid;
             grid-template-columns: 38% 62%;
-            gap: 48px; /* Reduced from 80px */
+            gap: 48px;
+            /* Reduced from 80px */
             align-items: flex-start;
         }
 
@@ -1483,7 +1563,8 @@
             color: var(--text-light);
             padding: 80px 0 40px;
             position: relative;
-            margin-top: 90px; /* Breathing space before footer on desktop */
+            margin-top: 90px;
+            /* Breathing space before footer on desktop */
         }
 
         .footer-grid {
@@ -1663,6 +1744,7 @@
                 justify-content: center;
                 gap: 20px;
             }
+
             .feature-card {
                 width: calc(50% - 10px);
             }
@@ -1696,15 +1778,22 @@
                 gap: 50px;
             }
 
-            .footer-grid > *:first-child {
+            .footer-grid>*:first-child {
                 grid-column: span 2;
             }
         }
 
         @media (max-width: 768px) {
-            #about, #why-choose-us, #rooms, #amenities, #location, #rules {
+
+            #about,
+            #why-choose-us,
+            #rooms,
+            #amenities,
+            #location,
+            #rules {
                 padding: 70px 0 !important;
             }
+
             #gallery {
                 padding: 110px 0 70px 0 !important;
             }
@@ -1778,7 +1867,7 @@
             }
 
             .hero-preview-card {
-                transition: transform 650ms cubic-bezier(.22,.61,.36,1), opacity 650ms ease !important;
+                transition: transform 650ms cubic-bezier(.22, .61, .36, 1), opacity 650ms ease !important;
                 cursor: pointer;
             }
 
@@ -1786,7 +1875,8 @@
                 display: inline-flex !important;
                 align-items: center;
                 justify-content: center;
-                margin: 12px auto 0 !important; /* Closer to the image stack */
+                margin: 12px auto 0 !important;
+                /* Closer to the image stack */
                 padding: 8px 16px !important;
                 border-radius: var(--radius-pill) !important;
                 font-size: 12px !important;
@@ -1842,7 +1932,8 @@
                 transform: scale(1.3) !important;
             }
 
-            .nav-links, .btn-nav-book {
+            .nav-links,
+            .btn-nav-book {
                 display: none;
             }
 
@@ -1869,11 +1960,13 @@
                     grid-template-columns: 1fr !important;
                     gap: 14px !important;
                 }
+
                 .btn-gallery-toggle {
                     width: 100% !important;
                     padding: 14px 20px !important;
                     border-radius: 18px !important;
                 }
+
                 .amenities-grid {
                     grid-template-columns: 1fr !important;
                     gap: 14px !important;
@@ -1894,14 +1987,15 @@
             }
 
             footer {
-                margin-top: 50px !important; /* Breathing space before footer on mobile */
+                margin-top: 50px !important;
+                /* Breathing space before footer on mobile */
             }
 
             .footer-grid {
                 grid-template-columns: 1fr;
             }
 
-            .footer-grid > * {
+            .footer-grid>* {
                 grid-column: span 1 !important;
             }
 
@@ -1925,7 +2019,7 @@
             }
 
             .wcu-card {
-                flex: 0 0 calc(100% - 24px); 
+                flex: 0 0 calc(100% - 24px);
                 margin: 0 12px;
                 padding: 32px 24px;
                 border-radius: 24px;
@@ -1934,7 +2028,7 @@
             .wcu-card-title {
                 font-size: 22px;
             }
-            
+
             .wcu-image-carousel-wrapper {
                 margin-top: 60px;
             }
@@ -2112,7 +2206,8 @@
             display: flex;
             align-items: center;
             width: 100%;
-            height: 92px; /* Fits text, icon, and phone cleanly */
+            height: 92px;
+            /* Fits text, icon, and phone cleanly */
             padding: 0 24px;
             border-radius: 26px;
             box-sizing: border-box;
@@ -2240,25 +2335,31 @@
                 padding: 36px 20px;
                 border-radius: 30px;
             }
+
             .modal-title {
                 font-size: 26px;
             }
+
             .modal-tile-btn {
                 height: 86px;
                 padding: 0 16px;
             }
+
             .tile-icon-wrapper {
                 margin-right: 12px;
                 width: 40px;
                 height: 40px;
             }
+
             .tile-icon-wrapper svg {
                 width: 18px;
                 height: 18px;
             }
+
             .tile-text-wrapper h3 {
                 font-size: 14.5px;
             }
+
             .tile-text-wrapper p {
                 font-size: 11px;
             }
@@ -2272,7 +2373,8 @@
                 width: 100%;
             }
 
-            .location-actions .btn-primary, .location-actions .btn-secondary {
+            .location-actions .btn-primary,
+            .location-actions .btn-secondary {
                 width: 100%;
                 height: 54px;
                 padding: 0 22px;
@@ -2290,7 +2392,8 @@
                 height: 320px !important;
             }
 
-            .about-glass-card, .nav-pill {
+            .about-glass-card,
+            .nav-pill {
                 backdrop-filter: blur(10px) !important;
                 -webkit-backdrop-filter: blur(10px) !important;
             }
@@ -2298,12 +2401,21 @@
 
         /* Disable expensive hover translations on touch devices */
         @media (hover: none) {
-            .btn-primary:hover, .btn-secondary:hover, .room-card:hover, .feature-card:hover, .about-collage-card:hover, .carousel-arrow:hover, .nav-links a:hover, .btn-room-whatsapp:hover, .btn-gallery-toggle:hover {
+
+            .btn-primary:hover,
+            .btn-secondary:hover,
+            .room-card:hover,
+            .feature-card:hover,
+            .about-collage-card:hover,
+            .nav-links a:hover,
+            .btn-room-whatsapp:hover,
+            .btn-gallery-toggle:hover {
                 transform: none !important;
             }
         }
     </style>
 </head>
+
 <body>
 
     <!-- --- FLOATING PILL NAVBAR --- -->
@@ -2354,33 +2466,53 @@
                     <div class="hero-label">Dibrugarh's First Capsule Homestay</div>
                     <h1 class="hero-title">Dibrugarh's First <span>Capsule Theme</span> Homestay</h1>
                     <div class="hero-subtitle">Where Comfort Meets Class</div>
-                    <p class="hero-desc">Luxury 1RK, 1BHK & 2BHK stays designed for comfort, privacy, work, and contemporary modern living in Dibrugarh, Assam.</p>
+                    <p class="hero-desc">Luxury 1RK, 1BHK & 2BHK stays designed for comfort, privacy, work, and
+                        contemporary modern living in Dibrugarh, Assam.</p>
                     <div class="hero-ctas">
                         <a href="#" onclick="openBookingModal(event)" class="btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
+                                fill="currentColor">
+                                <path
+                                    d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z" />
+                            </svg>
                             Book on WhatsApp
                         </a>
                         <a href="#rooms" class="btn-secondary">Explore Rooms</a>
                     </div>
                     <div class="hero-badges">
                         <div class="badge-pill">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                            </svg>
                             Capsule Theme
                         </div>
                         <div class="badge-pill">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                            </svg>
                             Private Kitchen
                         </div>
                         <div class="badge-pill">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                            </svg>
                             Free Parking
                         </div>
                         <div class="badge-pill">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                            </svg>
                             Workspace
                         </div>
                         <div class="badge-pill">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                            </svg>
                             AC Rooms
                         </div>
                     </div>
@@ -2388,19 +2520,28 @@
                 <div class="hero-visual">
                     <div class="hero-image-wrapper">
                         <!-- Dynamic interactive stack layout -->
-                        <div class="hero-card hero-preview-card pos-left is-left" data-pos="left" data-room="skyline" data-tilt-factor="0.4">
-                            <img src="photos/skylinesuite3.jpg" alt="Skyline Suite" width="320" height="440" decoding="async">
+                        <div class="hero-card hero-preview-card pos-left is-left" data-pos="left" data-room="skyline"
+                            data-tilt-factor="0.4">
+                            <img src="photos/skylinesuite3.jpg" alt="Skyline Suite" width="320" height="440"
+                                decoding="async">
                         </div>
-                        <div class="hero-card hero-preview-card pos-center is-active" data-pos="center" data-room="capsule" data-tilt-factor="0.2">
+                        <div class="hero-card hero-preview-card pos-center is-active" data-pos="center"
+                            data-room="capsule" data-tilt-factor="0.2">
                             <img src="photos/1rk.jpg" alt="Capsule Studio" width="320" height="440" decoding="async">
                         </div>
-                        <div class="hero-card hero-preview-card pos-right is-right" data-pos="right" data-room="2bhk" data-tilt-factor="0.4">
+                        <div class="hero-card hero-preview-card pos-right is-right" data-pos="right" data-room="2bhk"
+                            data-tilt-factor="0.4">
                             <img src="photos/2bhk5.jpg" alt="Cozy 2BHK" width="320" height="440" decoding="async">
                         </div>
                     </div>
                     <!-- Interaction indicators for mobile stack -->
                     <div class="hero-photo-hint">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="currentColor" style="margin-right: 6px; display: inline-block; vertical-align: middle;"><path d="M9 11.24V7.5a3 3 0 0 1 6 0v3.74c1.21-.38 2-1.5 2-2.74a5 5 0 0 0-10 0c0 1.24.79 2.36 2 2.74zM21 12H3v2a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-2zm-2 2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-1h14v1z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"
+                            fill="currentColor"
+                            style="margin-right: 6px; display: inline-block; vertical-align: middle;">
+                            <path
+                                d="M9 11.24V7.5a3 3 0 0 1 6 0v3.74c1.21-.38 2-1.5 2-2.74a5 5 0 0 0-10 0c0 1.24.79 2.36 2 2.74zM21 12H3v2a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-2zm-2 2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-1h14v1z" />
+                        </svg>
                         Tap photos to switch room preview
                     </div>
                     <div class="hero-indicators">
@@ -2420,30 +2561,41 @@
                 <!-- 2 overlapping image cards -->
                 <div class="about-collage">
                     <div class="about-collage-card card-top">
-                        <img src="photos/skylinesuite5.jpg" alt="Skyline Suite Interior" width="310" height="400" loading="lazy" decoding="async">
+                        <img src="photos/skylinesuite5.jpg" alt="Skyline Suite Interior" width="310" height="400"
+                            loading="lazy" decoding="async">
                     </div>
                     <div class="about-collage-card card-bottom">
-                        <img src="photos/1rk2.jpg" alt="Capsule Room Layout" width="290" height="370" loading="lazy" decoding="async">
+                        <img src="photos/1rk2.jpg" alt="Capsule Room Layout" width="290" height="370" loading="lazy"
+                            decoding="async">
                     </div>
                 </div>
-                
+
                 <!-- Glassmorphism content card -->
                 <div class="about-glass-card">
                     <span class="section-tag">Premium Hospitality</span>
                     <h2 class="about-title">About <span>Alpine Nest</span></h2>
-                    <p class="about-desc">Experience one of Dibrugarh's most unique premium homestays featuring luxury interiors, capsule-inspired architecture, and thoughtfully designed living spaces. Whether you're visiting for work, family, vacation, or a weekend getaway, Alpine Nest offers spacious accommodations equipped with everything needed for a comfortable stay.</p>
-                    
+                    <p class="about-desc">Experience one of Dibrugarh's most unique premium homestays featuring luxury
+                        interiors, capsule-inspired architecture, and thoughtfully designed living spaces. Whether
+                        you're visiting for work, family, vacation, or a weekend getaway, Alpine Nest offers spacious
+                        accommodations equipped with everything needed for a comfortable stay.</p>
+
                     <div class="about-features">
                         <div class="about-feature-pill">
-                            <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
                             Thoughtfully decorated capsule design elements
                         </div>
                         <div class="about-feature-pill">
-                            <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
                             Spacious layout sizes with fully equipped private kitchens
                         </div>
                         <div class="about-feature-pill">
-                            <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                            </svg>
                             Centrally located near business hubs and dining options
                         </div>
                     </div>
@@ -2459,9 +2611,10 @@
             <div class="wcu-header">
                 <span class="wcu-eyebrow">WHY CHOOSE ALPINE NEST</span>
                 <h2 class="wcu-title">Why Alpine Nest?</h2>
-                <p class="wcu-subtitle">A thoughtfully designed homestay in the heart of Dibrugarh, created for comfort, privacy and modern living.</p>
+                <p class="wcu-subtitle">A thoughtfully designed homestay in the heart of Dibrugarh, created for comfort,
+                    privacy and modern living.</p>
             </div>
-            
+
             <!-- 2. Horizontal Feature Carousel -->
             <div class="wcu-carousel-wrapper" id="wcuFeatureCarousel">
                 <div class="wcu-carousel-viewport">
@@ -2470,59 +2623,82 @@
                         <div class="wcu-card">
                             <div class="wcu-card-header">
                                 <span class="wcu-card-num">01</span>
-                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg></div>
+                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" />
+                                    </svg></div>
                             </div>
                             <h3 class="wcu-card-title">Capsule Theme Homestay</h3>
-                            <p class="wcu-card-desc">A distinctive capsule-inspired homestay experience with thoughtfully designed spaces and a unique architectural character.</p>
+                            <p class="wcu-card-desc">A distinctive capsule-inspired homestay experience with
+                                thoughtfully designed spaces and a unique architectural character.</p>
                         </div>
 
                         <div class="wcu-card">
                             <div class="wcu-card-header">
                                 <span class="wcu-card-num">02</span>
-                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                                    </svg></div>
                             </div>
                             <h3 class="wcu-card-title">1BHK & 2BHK Spaces</h3>
-                            <p class="wcu-card-desc">Comfortable accommodation options designed for couples, families, groups and longer stays.</p>
+                            <p class="wcu-card-desc">Comfortable accommodation options designed for couples, families,
+                                groups and longer stays.</p>
                         </div>
 
                         <div class="wcu-card">
                             <div class="wcu-card-header">
                                 <span class="wcu-card-num">03</span>
-                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24"><path d="M8.1 14.1c.4-.4.4-1.1 0-1.5-.4-.4-1.1-.4-1.5 0L5 14.1l-1.6-1.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l2.3 2.3c.4.4 1.1.4 1.5 0l2.4-2.3z"/></svg></div>
+                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M8.1 14.1c.4-.4.4-1.1 0-1.5-.4-.4-1.1-.4-1.5 0L5 14.1l-1.6-1.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l2.3 2.3c.4.4 1.1.4 1.5 0l2.4-2.3z" />
+                                    </svg></div>
                             </div>
                             <h3 class="wcu-card-title">Private Kitchen</h3>
-                            <p class="wcu-card-desc">Enjoy the convenience of having your own kitchen and cooking facilities during your stay.</p>
+                            <p class="wcu-card-desc">Enjoy the convenience of having your own kitchen and cooking
+                                facilities during your stay.</p>
                         </div>
 
                         <div class="wcu-card">
                             <div class="wcu-card-header">
                                 <span class="wcu-card-num">04</span>
-                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm1 11h-2v-2h2v2zm0-4h-2V8h2v2z"/></svg></div>
+                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm1 11h-2v-2h2v2zm0-4h-2V8h2v2z" />
+                                    </svg></div>
                             </div>
                             <h3 class="wcu-card-title">Premium Interiors</h3>
-                            <p class="wcu-card-desc">Warm lighting, custom details, contemporary furnishings and carefully designed interiors.</p>
+                            <p class="wcu-card-desc">Warm lighting, custom details, contemporary furnishings and
+                                carefully designed interiors.</p>
                         </div>
 
                         <div class="wcu-card">
                             <div class="wcu-card-header">
                                 <span class="wcu-card-num">05</span>
-                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg></div>
+                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" />
+                                    </svg></div>
                             </div>
                             <h3 class="wcu-card-title">Dedicated Workspace</h3>
-                            <p class="wcu-card-desc">Ergonomic desks and high-speed enterprise WiFi built for remote professionals.</p>
+                            <p class="wcu-card-desc">Ergonomic desks and high-speed enterprise WiFi built for remote
+                                professionals.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="wcu-controls">
                     <button class="wcu-btn-arrow prev" aria-label="Previous feature">
-                        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                        </svg>
                     </button>
                     <div class="wcu-pagination">
                         <!-- Dots populated by JS -->
                     </div>
                     <button class="wcu-btn-arrow next" aria-label="Next feature">
-                        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -2531,25 +2707,32 @@
             <div class="wcu-carousel-wrapper wcu-image-carousel-wrapper" id="wcuImageCarousel">
                 <div class="wcu-carousel-viewport">
                     <div class="wcu-carousel-track">
-                        <div class="wcu-img-slide"><img src="photos/skylinesuite1.jpg" alt="Skyline Suite" loading="lazy" decoding="async"></div>
-                        <div class="wcu-img-slide"><img src="photos/1rk2.jpg" alt="Capsule Studio" loading="lazy" decoding="async"></div>
-                        <div class="wcu-img-slide"><img src="photos/2bhk3.jpg" alt="Family Space" loading="lazy" decoding="async"></div>
-                        <div class="wcu-img-slide"><img src="photos/2bhk5.jpg" alt="Living Area" loading="lazy" decoding="async"></div>
-                        <div class="wcu-img-slide"><img src="photos/2bhk6.jpg" alt="Kitchen interior" loading="lazy" decoding="async"></div>
-                        <div class="wcu-img-slide"><img src="photos/skylinesuite2.jpg" alt="Bedroom interior" loading="lazy" decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/skylinesuite1.jpg" alt="Skyline Suite"
+                                loading="lazy" decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/1rk2.jpg" alt="Capsule Studio" loading="lazy"
+                                decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/2bhk3.jpg" alt="Family Space" loading="lazy"
+                                decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/2bhk5.jpg" alt="Living Area" loading="lazy"
+                                decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/2bhk6.jpg" alt="Kitchen interior" loading="lazy"
+                                decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/skylinesuite2.jpg" alt="Bedroom interior"
+                                loading="lazy" decoding="async"></div>
+                        <!-- Duplicated set for seamless marquee -->
+                        <div class="wcu-img-slide" aria-hidden="true"><img src="photos/skylinesuite1.jpg" alt="Skyline Suite"
+                                loading="lazy" decoding="async"></div>
+                        <div class="wcu-img-slide" aria-hidden="true"><img src="photos/1rk2.jpg" alt="Capsule Studio" loading="lazy"
+                                decoding="async"></div>
+                        <div class="wcu-img-slide" aria-hidden="true"><img src="photos/2bhk3.jpg" alt="Family Space" loading="lazy"
+                                decoding="async"></div>
+                        <div class="wcu-img-slide" aria-hidden="true"><img src="photos/2bhk5.jpg" alt="Living Area" loading="lazy"
+                                decoding="async"></div>
+                        <div class="wcu-img-slide" aria-hidden="true"><img src="photos/2bhk6.jpg" alt="Kitchen interior" loading="lazy"
+                                decoding="async"></div>
+                        <div class="wcu-img-slide" aria-hidden="true"><img src="photos/skylinesuite2.jpg" alt="Bedroom interior"
+                                loading="lazy" decoding="async"></div>
                     </div>
-                </div>
-                
-                <div class="wcu-controls">
-                    <button class="wcu-btn-arrow prev" aria-label="Previous image">
-                        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-                    </button>
-                    <div class="wcu-pagination">
-                        <!-- Dots populated by JS -->
-                    </div>
-                    <button class="wcu-btn-arrow next" aria-label="Next image">
-                        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-                    </button>
                 </div>
             </div>
         </div>
@@ -2562,24 +2745,34 @@
                 <span class="section-tag">Sanctuary Suites</span>
                 <h2>Our Premium <span>Accommodations</span></h2>
             </div>
-            
+
             <div class="rooms-grid">
                 <!-- Room Card 1: Skyline Suite -->
                 <div class="room-card" id="room-skyline">
                     <div class="room-carousel" data-carousel-id="skyline">
                         <div class="carousel-slides">
-                            <div class="carousel-slide"><img src="photos/skylinesuite4.jpg" alt="Skyline Suite Main" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite5.jpg" alt="Skyline Suite Bed" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite1.jpg" alt="Skyline Suite Lounge" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite2.jpg" alt="Skyline Suite Dining" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite3.jpg" alt="Skyline Suite Window" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite6.jpg" alt="Skyline Suite Kitchen" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite4.jpg" alt="Skyline Suite Main"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite5.jpg" alt="Skyline Suite Bed"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite1.jpg" alt="Skyline Suite Lounge"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite2.jpg" alt="Skyline Suite Dining"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite3.jpg" alt="Skyline Suite Window"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/skylinesuite6.jpg" alt="Skyline Suite Kitchen"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
                         </div>
                         <button class="carousel-arrow arrow-prev" aria-label="Previous Slide">
-                            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                            </svg>
                         </button>
                         <button class="carousel-arrow arrow-next" aria-label="Next Slide">
-                            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                            </svg>
                         </button>
                         <div class="carousel-dots"></div>
                     </div>
@@ -2593,22 +2786,45 @@
                             <span class="room-period">/ night</span>
                         </div>
                         <ul class="room-amenities-list">
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>High-Speed WiFi</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Smart TV</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Air Conditioning</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Free Parking</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Refrigerator</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Private Kitchen</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Workspace</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Attached Bath</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>High-Speed WiFi</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Smart TV</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Air Conditioning</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Free Parking</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Refrigerator</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Private Kitchen</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Workspace</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Attached Bath</li>
                         </ul>
                         <div class="room-actions">
                             <button class="btn-room-whatsapp" onclick="directRoomWhatsApp('Skyline Suite')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+                                    fill="currentColor">
+                                    <path
+                                        d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z" />
+                                </svg>
                                 WhatsApp Booking
                             </button>
                             <a href="tel:+918486627950" class="btn-room-call" aria-label="Call to Book">
-                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -2618,17 +2834,27 @@
                 <div class="room-card" id="room-capsule">
                     <div class="room-carousel" data-carousel-id="capsule">
                         <div class="carousel-slides">
-                            <div class="carousel-slide"><img src="photos/1rk.jpg" alt="Capsule Studio Main" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/1rk2.jpg" alt="Capsule Studio Interior" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/1rk3.jpg" alt="Capsule Studio Kitchen Layout" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/1rk4.jpg" alt="Capsule Studio Bed View" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/1rk5.jpg" alt="Capsule Studio Architectural Perspective" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/1rk.jpg" alt="Capsule Studio Main" width="600"
+                                    height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/1rk2.jpg" alt="Capsule Studio Interior"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/1rk3.jpg" alt="Capsule Studio Kitchen Layout"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/1rk4.jpg" alt="Capsule Studio Bed View"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/1rk5.jpg"
+                                    alt="Capsule Studio Architectural Perspective" width="600" height="400"
+                                    loading="lazy" decoding="async"></div>
                         </div>
                         <button class="carousel-arrow arrow-prev" aria-label="Previous Slide">
-                            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                            </svg>
                         </button>
                         <button class="carousel-arrow arrow-next" aria-label="Next Slide">
-                            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                            </svg>
                         </button>
                         <div class="carousel-dots"></div>
                     </div>
@@ -2642,21 +2868,42 @@
                             <span class="room-period">/ night</span>
                         </div>
                         <ul class="room-amenities-list">
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>High-Speed WiFi</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Smart TV</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Air Conditioning</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Free Parking</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Private Kitchen</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Workspace</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Attached Bath</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>High-Speed WiFi</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Smart TV</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Air Conditioning</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Free Parking</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Private Kitchen</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Workspace</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Attached Bath</li>
                         </ul>
                         <div class="room-actions">
                             <button class="btn-room-whatsapp" onclick="directRoomWhatsApp('Capsule Studio')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+                                    fill="currentColor">
+                                    <path
+                                        d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z" />
+                                </svg>
                                 WhatsApp Booking
                             </button>
                             <a href="tel:+918486627950" class="btn-room-call" aria-label="Call to Book">
-                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -2666,19 +2913,30 @@
                 <div class="room-card" id="room-2bhk">
                     <div class="room-carousel" data-carousel-id="2bhk">
                         <div class="carousel-slides">
-                            <div class="carousel-slide"><img src="photos/2bhk1.jpg" alt="Cozy 2BHK Main Living" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk2.jpg" alt="Cozy 2BHK Master Bedroom" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk3.jpg" alt="Cozy 2BHK Second Bed" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk4.jpg" alt="Cozy 2BHK Sofa Space" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk5.jpg" alt="Cozy 2BHK Dining Setup" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk6.jpg" alt="Cozy 2BHK Kitchen" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/2bhk7.jpg" alt="Cozy 2BHK Bathroom" width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk1.jpg" alt="Cozy 2BHK Main Living"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk2.jpg" alt="Cozy 2BHK Master Bedroom"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk3.jpg" alt="Cozy 2BHK Second Bed"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk4.jpg" alt="Cozy 2BHK Sofa Space"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk5.jpg" alt="Cozy 2BHK Dining Setup"
+                                    width="600" height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk6.jpg" alt="Cozy 2BHK Kitchen" width="600"
+                                    height="400" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/2bhk7.jpg" alt="Cozy 2BHK Bathroom" width="600"
+                                    height="400" loading="lazy" decoding="async"></div>
                         </div>
                         <button class="carousel-arrow arrow-prev" aria-label="Previous Slide">
-                            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                            </svg>
                         </button>
                         <button class="carousel-arrow arrow-next" aria-label="Next Slide">
-                            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                            </svg>
                         </button>
                         <div class="carousel-dots"></div>
                     </div>
@@ -2692,22 +2950,45 @@
                             <span class="room-period">/ night</span>
                         </div>
                         <ul class="room-amenities-list">
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>High-Speed WiFi</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Smart TV</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Air Conditioning</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Free Parking</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Refrigerator</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Private Kitchen</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Workspace</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Attached Bath</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>High-Speed WiFi</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Smart TV</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Air Conditioning</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Free Parking</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Refrigerator</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Private Kitchen</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Workspace</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Attached Bath</li>
                         </ul>
                         <div class="room-actions">
                             <button class="btn-room-whatsapp" onclick="directRoomWhatsApp('Cozy 2BHK Studio')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+                                    fill="currentColor">
+                                    <path
+                                        d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z" />
+                                </svg>
                                 WhatsApp Booking
                             </button>
                             <a href="tel:+918486627950" class="btn-room-call" aria-label="Call to Book">
-                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -2717,18 +2998,28 @@
                 <div class="room-card" id="room-niribili">
                     <div class="room-carousel" id="niribili-carousel" data-carousel-id="niribili" data-infinite="true">
                         <div class="carousel-slides">
-                            <div class="carousel-slide"><img src="photos/nirbili1.jpg" alt="Niribili Image 01" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/nirbili2.jpg" alt="Niribili Image 02" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/nirbili3.jpg" alt="Niribili Image 03" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/nirbili4.jpg" alt="Niribili Image 04" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/nirbili5.jpg" alt="Niribili Image 05" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/nirbili6.jpg" alt="Niribili Image 06" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/nirbili1.jpg" alt="Niribili Image 01"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/nirbili2.jpg" alt="Niribili Image 02"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/nirbili3.jpg" alt="Niribili Image 03"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/nirbili4.jpg" alt="Niribili Image 04"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/nirbili5.jpg" alt="Niribili Image 05"
+                                    loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/nirbili6.jpg" alt="Niribili Image 06"
+                                    loading="lazy" decoding="async"></div>
                         </div>
                         <button class="carousel-arrow arrow-prev" aria-label="Previous Slide">
-                            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                            </svg>
                         </button>
                         <button class="carousel-arrow arrow-next" aria-label="Next Slide">
-                            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                            </svg>
                         </button>
                         <div class="carousel-dots"></div>
                     </div>
@@ -2742,21 +3033,42 @@
                             <span class="room-period">/ night</span>
                         </div>
                         <ul class="room-amenities-list">
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>WiFi</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Fully Equipped Kitchen</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Refrigerator</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Water Purifier</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Smart TV</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Attached Bathroom</li>
-                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Geyser</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>WiFi</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Fully Equipped Kitchen</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Refrigerator</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Water Purifier</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Smart TV</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Attached Bathroom</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24">
+                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+                                </svg>Geyser</li>
                         </ul>
                         <div class="room-actions">
                             <button class="btn-room-whatsapp" onclick="directRoomWhatsApp('Niribili')">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"
+                                    fill="currentColor">
+                                    <path
+                                        d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z" />
+                                </svg>
                                 WhatsApp Booking
                             </button>
                             <a href="tel:+918486627950" class="btn-room-call" aria-label="Call to Book">
-                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -2772,75 +3084,103 @@
                 <span class="section-tag">Luxurious Essentials</span>
                 <h2>Everything You <span>Need</span></h2>
             </div>
-            
+
             <div class="amenities-grid">
                 <!-- Amenity 1 -->
                 <div class="amenity-card">
                     <div class="icon-holder">
-                        <svg viewBox="0 0 24 24"><path d="M12.01 21.49L23.64 7c-.45-.34-4.93-4-11.64-4C5.28 3 .81 6.66.36 7l11.63 14.49.01.01.01-.01zM3.46 9.15C4.99 8.01 8.24 6 12 6s7.01 2.01 8.54 3.15L12 19.78 3.46 9.15z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.01 21.49L23.64 7c-.45-.34-4.93-4-11.64-4C5.28 3 .81 6.66.36 7l11.63 14.49.01.01.01-.01zM3.46 9.15C4.99 8.01 8.24 6 12 6s7.01 2.01 8.54 3.15L12 19.78 3.46 9.15z" />
+                        </svg>
                     </div>
                     <h3>High-Speed WiFi</h3>
                 </div>
                 <!-- Amenity 2 -->
                 <div class="amenity-card">
                     <div class="icon-holder">
-                        <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z" />
+                        </svg>
                     </div>
                     <h3>Smart TV</h3>
                 </div>
                 <!-- Amenity 3 -->
                 <div class="amenity-card">
                     <div class="icon-holder">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
                     </div>
                     <h3>Air Conditioning</h3>
                 </div>
                 <!-- Amenity 4 -->
                 <div class="amenity-card">
                     <div class="icon-holder">
-                        <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                        </svg>
                     </div>
                     <h3>Free Parking</h3>
                 </div>
                 <!-- Amenity 5 -->
                 <div class="amenity-card">
                     <div class="icon-holder">
-                        <svg viewBox="0 0 24 24"><path d="M8.1 14.1c.4-.4.4-1.1 0-1.5-.4-.4-1.1-.4-1.5 0L5 14.1l-1.6-1.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l2.3 2.3c.4.4 1.1.4 1.5 0l2.4-2.3z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M8.1 14.1c.4-.4.4-1.1 0-1.5-.4-.4-1.1-.4-1.5 0L5 14.1l-1.6-1.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l2.3 2.3c.4.4 1.1.4 1.5 0l2.4-2.3z" />
+                        </svg>
                     </div>
                     <h3>Private Kitchen</h3>
                 </div>
                 <!-- Amenity 6 -->
                 <div class="amenity-card">
                     <div class="icon-holder">
-                        <svg viewBox="0 0 24 24"><path d="M20 13V4H4v9H2v2h20v-2h-2zM6 6h12v7H6V6zm2 11h8v1H8v-1z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 13V4H4v9H2v2h20v-2h-2zM6 6h12v7H6V6zm2 11h8v1H8v-1z" />
+                        </svg>
                     </div>
                     <h3>Attached Bathroom</h3>
                 </div>
                 <!-- Amenity 7 -->
                 <div class="amenity-card">
                     <div class="icon-holder">
-                        <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" />
+                        </svg>
                     </div>
                     <h3>Dedicated Workspace</h3>
                 </div>
                 <!-- Amenity 8 -->
                 <div class="amenity-card">
                     <div class="icon-holder">
-                        <svg viewBox="0 0 24 24"><path d="M12 2c-1.1 0-2 .9-2 2v6.17c-.31-.11-.64-.17-1-.17-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V6h4v4h2V4c0-1.1-.9-2-2-2h-4z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2c-1.1 0-2 .9-2 2v6.17c-.31-.11-.64-.17-1-.17-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V6h4v4h2V4c0-1.1-.9-2-2-2h-4z" />
+                        </svg>
                     </div>
                     <h3>Hot Water</h3>
                 </div>
                 <!-- Amenity 9 -->
                 <div class="amenity-card">
                     <div class="icon-holder">
-                        <svg viewBox="0 0 24 24"><path d="M20 8H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm-9 6H4v-4h7v4zm9 0h-7v-4h7v4z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20 8H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm-9 6H4v-4h7v4zm9 0h-7v-4h7v4z" />
+                        </svg>
                     </div>
                     <h3>Fresh Linen</h3>
                 </div>
                 <!-- Amenity 10 -->
                 <div class="amenity-card">
                     <div class="icon-holder">
-                        <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm1 11h-2v-2h2v2zm0-4h-2V8h2v2z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm1 11h-2v-2h2v2zm0-4h-2V8h2v2z" />
+                        </svg>
                     </div>
                     <h3>Premium Interiors</h3>
                 </div>
@@ -2855,81 +3195,101 @@
                 <span class="section-tag">Visual Diary</span>
                 <h2>Gallery <span>Showcase</span></h2>
             </div>
-            
+
             <div class="gallery-filters">
                 <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
                 <button class="filter-btn" onclick="filterGallery('skyline', this)">Skyline Suite</button>
                 <button class="filter-btn" onclick="filterGallery('capsule', this)">Capsule Studio</button>
                 <button class="filter-btn" onclick="filterGallery('2bhk', this)">Cozy 2BHK</button>
             </div>
-            
+
             <div class="gallery-grid">
                 <!-- Skyline Suite Photos -->
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite1.jpg" alt="Skyline Room Lounge Style" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/skylinesuite1.jpg" alt="Skyline Room Lounge Style" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite2.jpg" alt="Skyline Room Dining Setup" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/skylinesuite2.jpg" alt="Skyline Room Dining Setup" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite3.jpg" alt="Skyline Room Glass Panel View" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/skylinesuite3.jpg" alt="Skyline Room Glass Panel View" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite4.jpg" alt="Skyline Room Master Bed" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/skylinesuite4.jpg" alt="Skyline Room Master Bed" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite5.jpg" alt="Skyline Room Seating Area" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/skylinesuite5.jpg" alt="Skyline Room Seating Area" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite6.jpg" alt="Skyline Room Modular Kitchen" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/skylinesuite6.jpg" alt="Skyline Room Modular Kitchen" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
 
                 <!-- Capsule Studio Photos -->
                 <div class="gallery-item" data-category="capsule">
-                    <img src="photos/1rk.jpg" alt="Capsule Studio Living layout" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/1rk.jpg" alt="Capsule Studio Living layout" width="400" height="300" loading="lazy"
+                        decoding="async">
                 </div>
                 <div class="gallery-item" data-category="capsule">
-                    <img src="photos/1rk2.jpg" alt="Capsule Studio Circular mirror styling" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/1rk2.jpg" alt="Capsule Studio Circular mirror styling" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="capsule">
-                    <img src="photos/1rk3.jpg" alt="Capsule Studio Cozy Bed details" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/1rk3.jpg" alt="Capsule Studio Cozy Bed details" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="capsule">
-                    <img src="photos/1rk4.jpg" alt="Capsule Studio Kitchen stove area" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/1rk4.jpg" alt="Capsule Studio Kitchen stove area" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="capsule">
-                    <img src="photos/1rk5.jpg" alt="Capsule Studio Bath fittings" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/1rk5.jpg" alt="Capsule Studio Bath fittings" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
 
                 <!-- Cozy 2BHK Photos -->
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk1.jpg" alt="Cozy 2BHK Main Living setup" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/2bhk1.jpg" alt="Cozy 2BHK Main Living setup" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk2.jpg" alt="Cozy 2BHK Master Bedroom View" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/2bhk2.jpg" alt="Cozy 2BHK Master Bedroom View" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk3.jpg" alt="Cozy 2BHK Guest Room setup" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/2bhk3.jpg" alt="Cozy 2BHK Guest Room setup" width="400" height="300" loading="lazy"
+                        decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk4.jpg" alt="Cozy 2BHK Corner desk seating" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/2bhk4.jpg" alt="Cozy 2BHK Corner desk seating" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk5.jpg" alt="Cozy 2BHK Dining corner details" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/2bhk5.jpg" alt="Cozy 2BHK Dining corner details" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk6.jpg" alt="Cozy 2BHK Full Kitchen appliances" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/2bhk6.jpg" alt="Cozy 2BHK Full Kitchen appliances" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item" data-category="2bhk">
-                    <img src="photos/2bhk7.jpg" alt="Cozy 2BHK Clean Bathroom styling" width="400" height="300" loading="lazy" decoding="async">
+                    <img src="photos/2bhk7.jpg" alt="Cozy 2BHK Clean Bathroom styling" width="400" height="300"
+                        loading="lazy" decoding="async">
                 </div>
             </div>
-            
+
             <!-- Show More Button -->
             <div class="gallery-action">
                 <button id="gallery-toggle-btn" class="btn-gallery-toggle" onclick="toggleGalleryCollapse()">
                     <span>Show More Photos</span>
-                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                    </svg>
                 </button>
             </div>
         </div>
@@ -2942,21 +3302,26 @@
                 <div class="rules-side-info">
                     <span class="section-tag">Stay Guidelines</span>
                     <h2>House <span>Rules</span> & Policies</h2>
-                    <p class="location-desc" style="margin-top: 14px;">To ensure a comfortable, hygienic, and secure environment for all our guests, we request you to review and observe the following guidelines during your stay.</p>
+                    <p class="location-desc" style="margin-top: 14px;">To ensure a comfortable, hygienic, and secure
+                        environment for all our guests, we request you to review and observe the following guidelines
+                        during your stay.</p>
                 </div>
-                
+
                 <div class="accordion">
                     <!-- Rule 1 -->
                     <div class="accordion-item active">
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <h3><span>01</span> No Smoking Inside</h3>
                             <div class="accordion-icon">
-                                <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                                </svg>
                             </div>
                         </div>
                         <div class="accordion-body" style="max-height: 200px;">
                             <div class="accordion-content">
-                                Smoking is strictly prohibited inside any of the guest rooms or indoor suites to maintain freshness and safety. Dedicated outdoor spots are available.
+                                Smoking is strictly prohibited inside any of the guest rooms or indoor suites to
+                                maintain freshness and safety. Dedicated outdoor spots are available.
                             </div>
                         </div>
                     </div>
@@ -2966,12 +3331,15 @@
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <h3><span>02</span> Quiet Hours After 10:00 PM</h3>
                             <div class="accordion-icon">
-                                <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                                </svg>
                             </div>
                         </div>
                         <div class="accordion-body">
                             <div class="accordion-content">
-                                To respect other residents and fellow travelers, playing loud music or hosting noisy gatherings is strictly restricted after 10:00 PM.
+                                To respect other residents and fellow travelers, playing loud music or hosting noisy
+                                gatherings is strictly restricted after 10:00 PM.
                             </div>
                         </div>
                     </div>
@@ -2981,12 +3349,15 @@
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <h3><span>03</span> Maintain Cleanliness</h3>
                             <div class="accordion-icon">
-                                <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                                </svg>
                             </div>
                         </div>
                         <div class="accordion-body">
                             <div class="accordion-content">
-                                We pride ourselves on hygiene. Please keep the rooms, common spaces, and private kitchens tidy. Daily room cleaning is available.
+                                We pride ourselves on hygiene. Please keep the rooms, common spaces, and private
+                                kitchens tidy. Daily room cleaning is available.
                             </div>
                         </div>
                     </div>
@@ -2996,12 +3367,15 @@
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <h3><span>04</span> Respect Other Guests</h3>
                             <div class="accordion-icon">
-                                <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                                </svg>
                             </div>
                         </div>
                         <div class="accordion-body">
                             <div class="accordion-content">
-                                Treat shared property utilities and staff members with courtesy. High-quality hospitality relies on mutual respect.
+                                Treat shared property utilities and staff members with courtesy. High-quality
+                                hospitality relies on mutual respect.
                             </div>
                         </div>
                     </div>
@@ -3011,12 +3385,15 @@
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <h3><span>05</span> Government ID Required</h3>
                             <div class="accordion-icon">
-                                <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                                </svg>
                             </div>
                         </div>
                         <div class="accordion-body">
                             <div class="accordion-content">
-                                All domestic and international travelers must present a valid government-issued photo ID card (Aadhaar, Passport, Driving License) at check-in.
+                                All domestic and international travelers must present a valid government-issued photo ID
+                                card (Aadhaar, Passport, Driving License) at check-in.
                             </div>
                         </div>
                     </div>
@@ -3026,12 +3403,15 @@
                         <div class="accordion-header" onclick="toggleAccordion(this)">
                             <h3><span>06</span> Damage Charges Applicable</h3>
                             <div class="accordion-icon">
-                                <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                                </svg>
                             </div>
                         </div>
                         <div class="accordion-body">
                             <div class="accordion-content">
-                                Any breakage or damage caused to the furniture, appliances, or properties during your stay will be charged directly to the checking account.
+                                Any breakage or damage caused to the furniture, appliances, or properties during your
+                                stay will be charged directly to the checking account.
                             </div>
                         </div>
                     </div>
@@ -3047,15 +3427,21 @@
                 <div class="location-info">
                     <span class="section-tag">Conveniently Located</span>
                     <h2 class="location-title">Find Us in <span>Dibrugarh</span></h2>
-                    <p class="location-desc">Located in the tranquil yet accessible residential zones of Dibrugarh, Assam. Perfect base for exploring local tea gardens, corporate visits, family reunions, or transit stays near business hubs.</p>
+                    <p class="location-desc">Located in the tranquil yet accessible residential zones of Dibrugarh,
+                        Assam. Perfect base for exploring local tea gardens, corporate visits, family reunions, or
+                        transit stays near business hubs.</p>
                     <div class="location-actions">
-                        <a href="https://maps.app.goo.gl/7v4AE7jQxCSDURGFA?g_st=aw" target="_blank" class="btn btn-primary">Open Google Maps</a>
-                        <a href="https://maps.app.goo.gl/7v4AE7jQxCSDURGFA?g_st=aw" target="_blank" class="btn btn-secondary">Get Directions</a>
+                        <a href="https://maps.app.goo.gl/7v4AE7jQxCSDURGFA?g_st=aw" target="_blank"
+                            class="btn btn-primary">Open Google Maps</a>
+                        <a href="https://maps.app.goo.gl/7v4AE7jQxCSDURGFA?g_st=aw" target="_blank"
+                            class="btn btn-secondary">Get Directions</a>
                     </div>
                 </div>
                 <div class="map-wrapper">
                     <!-- Google Maps Embed (Exact Location) -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.810505199653!2d94.9189035!3d27.4788325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374099b54cfa50e1%3A0xd04ee3bcc5057c93!2sAlpine%20Nest!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.810505199653!2d94.9189035!3d27.4788325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374099b54cfa50e1%3A0xd04ee3bcc5057c93!2sAlpine%20Nest!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -3070,9 +3456,10 @@
                         <img src="photos/alpinenestlogo.jpg" alt="Alpine Nest Logo">
                         <span>Alpine Nest</span>
                     </div>
-                    <p>Dibrugarh's first capsule-themed boutique stay. Where Comfort Meets Class. Experience premium hospitality nestled in the heart of Assam.</p>
+                    <p>Dibrugarh's first capsule-themed boutique stay. Where Comfort Meets Class. Experience premium
+                        hospitality nestled in the heart of Assam.</p>
                 </div>
-                
+
                 <div class="footer-links-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
@@ -3088,25 +3475,39 @@
                     <h4>Get In Touch</h4>
                     <div class="footer-contact-info">
                         <div class="footer-contact-item">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            <p>Alpine Nest<br>Dibrugarh, Amolapatty</p>
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            <p>Alpine Nest<br> Dibrugarh, Amolapatty</p>
                         </div>
                         <div class="footer-contact-item">
-                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                            </svg>
                             <p>+91 84866 27950<br>+91 96787 84771</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Alpine Nest Homestay. All rights reserved.</p>
                 <div class="footer-socials">
-                    <a href="https://instagram.com/alpinenest_homestay_dibrugarh" target="_blank" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                    <a href="https://instagram.com/alpinenest_homestay_dibrugarh" target="_blank"
+                        aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                        </svg>
                     </a>
-                    <a href="https://maps.app.goo.gl/7v4AE7jQxCSDURGFA?g_st=aw" target="_blank" aria-label="Google Maps">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <a href="https://maps.app.goo.gl/7v4AE7jQxCSDURGFA?g_st=aw" target="_blank"
+                        aria-label="Google Maps">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -3120,13 +3521,17 @@
             <div class="modal-badge">BOOK YOUR STAY</div>
             <div class="modal-brand-label">ALPINE NEST HOMESTAY</div>
             <h2 class="modal-title">Book Your Stay</h2>
-            <p class="modal-subtitle">Choose your preferred booking option. For urgent availability, call us directly.</p>
-            
+            <p class="modal-subtitle">Choose your preferred booking option. For urgent availability, call us directly.
+            </p>
+
             <div class="modal-options-stack">
                 <!-- Option 1: WhatsApp Tile -->
                 <a href="#" class="modal-tile-btn whatsapp-tile" onclick="handleWhatsAppBookingClick(event)">
                     <div class="tile-icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z" />
+                        </svg>
                     </div>
                     <div class="tile-text-wrapper">
                         <h3>Book on WhatsApp</h3>
@@ -3134,11 +3539,14 @@
                         <span class="tile-number">+91 84866 27950</span>
                     </div>
                 </a>
-                
+
                 <!-- Option 2: Call Main Tile -->
                 <a href="tel:+918486627950" class="modal-tile-btn call-tile" onclick="closeBookingModal()">
                     <div class="tile-icon-wrapper">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
                     </div>
                     <div class="tile-text-wrapper">
                         <h3>Call Main Number</h3>
@@ -3150,7 +3558,10 @@
                 <!-- Option 3: Call Alternative Tile -->
                 <a href="tel:+919678784771" class="modal-tile-btn call-tile" onclick="closeBookingModal()">
                     <div class="tile-icon-wrapper">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
                     </div>
                     <div class="tile-text-wrapper">
                         <h3>Call Alternative Number</h3>
@@ -3216,7 +3627,7 @@
                 header.classList.remove('scroll-down');
                 header.classList.add('scroll-up');
             }
-            
+
             lastScroll = currentScroll;
         }
 
@@ -3232,7 +3643,7 @@
                 const prevBtn = carouselEl.querySelector('.arrow-prev');
                 const nextBtn = carouselEl.querySelector('.arrow-next');
                 const dots = [];
-                
+
                 // Create Dots and cache them
                 for (let i = 0; i < slideCount; i++) {
                     const dot = document.createElement('div');
@@ -3281,7 +3692,7 @@
             const state = carousels[id];
             // Hardware acceleration using translate3d
             state.element.style.transform = `translate3d(-${state.current * 100}%, 0, 0)`;
-            
+
             // Update dots from cached array to prevent layout recalculation
             state.dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === state.current);
@@ -3338,16 +3749,16 @@
         if (window.innerWidth > 1024) {
             document.querySelectorAll('.hero-card').forEach(card => {
                 const factor = parseFloat(card.dataset.tiltFactor) || 0.15; // Keep max rotation low
-                
+
                 card.addEventListener('mousemove', e => {
                     const rect = card.getBoundingClientRect();
                     const x = e.clientX - rect.left - rect.width / 2;
                     const y = e.clientY - rect.top - rect.height / 2;
-                    
+
                     // Low rotation to prevent over-rotation
                     const rotateX = -y / rect.height * 10 * factor;
                     const rotateY = x / rect.width * 10 * factor;
-                    
+
                     const pos = card.getAttribute('data-pos');
                     let baseTransform = '';
                     if (pos === 'left') {
@@ -3357,10 +3768,10 @@
                     } else if (pos === 'center') {
                         baseTransform = 'translateX(0) scale(1.03) rotate(0deg)';
                     }
-                    
+
                     card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) ${baseTransform}`;
                 });
-                
+
                 card.addEventListener('mouseleave', () => {
                     card.style.transform = '';
                 });
@@ -3372,7 +3783,7 @@
         let activeHeroIndex = 1; // Capsule Studio is active by default
         const heroCards = document.querySelectorAll('.hero-card');
         const heroIndicators = document.querySelectorAll('.hero-indicator');
-        
+
         let autoplayTimer = setInterval(nextHeroImage, 4000);
         let resumeTimer = null;
 
@@ -3380,13 +3791,13 @@
             heroCards.forEach(card => {
                 const roomName = card.getAttribute('data-room');
                 const roomIdx = rooms.indexOf(roomName);
-                
+
                 // Clear active mousemove transforms to let transitions animate smoothly
                 card.style.transform = '';
-                
+
                 // Optimize rendering during animation
                 card.style.willChange = 'transform, opacity';
-                
+
                 if (roomIdx === activeHeroIndex) {
                     card.className = 'hero-card hero-preview-card pos-center is-active';
                     card.setAttribute('data-pos', 'center');
@@ -3397,13 +3808,13 @@
                     card.className = 'hero-card hero-preview-card pos-right is-right';
                     card.setAttribute('data-pos', 'right');
                 }
-                
+
                 // Remove will-change after transition finishes to save memory
                 setTimeout(() => {
                     card.style.willChange = 'auto';
                 }, 650);
             });
-            
+
             // Sync active state indicators
             const currentActiveRoom = rooms[activeHeroIndex];
             heroIndicators.forEach(ind => {
@@ -3419,18 +3830,18 @@
         function handleInteraction(index) {
             // Clear autoplay interval immediately
             clearInterval(autoplayTimer);
-            
+
             // Clear any active resume timeout
             if (resumeTimer) {
                 clearTimeout(resumeTimer);
             }
-            
+
             // If it's a different room, change index and update deck
             if (activeHeroIndex !== index) {
                 activeHeroIndex = index;
                 updateHeroDeck();
             }
-            
+
             // Setup a timeout to resume autoplay after 6 seconds
             resumeTimer = setTimeout(() => {
                 autoplayTimer = setInterval(nextHeroImage, 4000);
@@ -3478,7 +3889,7 @@
             // Reset collapsed state
             galleryCategory = category;
             galleryCollapsed = true;
-            
+
             updateGalleryView();
         }
 
@@ -3489,7 +3900,7 @@
 
             items.forEach(item => {
                 const matches = (galleryCategory === 'all' || item.dataset.category === galleryCategory);
-                
+
                 if (matches) {
                     if (galleryCollapsed) {
                         if (matchingIndex < limit) {
@@ -3539,7 +3950,7 @@
         window.addEventListener('DOMContentLoaded', () => {
             updateGalleryView();
         });
-        
+
         let galleryResizeTimeout;
         window.addEventListener('resize', () => {
             clearTimeout(galleryResizeTimeout);
@@ -3574,7 +3985,7 @@
             const url = `https://api.whatsapp.com/send?phone=918486627950&text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
         }
-        
+
         function openBookingModal(e, roomName = "") {
             if (e) {
                 e.preventDefault();
@@ -3584,7 +3995,7 @@
             const modal = document.getElementById('booking-modal');
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
-            
+
             // Close mobile menu if open
             const menuToggle = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -3628,7 +4039,7 @@
                 closeBookingModal();
             }
         });
-        
+
         // Close button inside modal
         document.addEventListener('DOMContentLoaded', () => {
             const closeBtn = document.querySelector('.modal-close-btn');
@@ -3643,97 +4054,97 @@
                 this.wrapper = wrapper;
                 this.track = wrapper.querySelector('.wcu-carousel-track');
                 if (!this.track) return;
-                
+
                 this.slides = Array.from(this.track.children);
                 this.prevBtn = wrapper.querySelector('.wcu-btn-arrow.prev');
                 this.nextBtn = wrapper.querySelector('.wcu-btn-arrow.next');
                 this.pagination = wrapper.querySelector('.wcu-pagination');
-                
+
                 if (this.slides.length === 0) return;
-                
+
                 this.currentIndex = 1;
                 this.isDragging = false;
                 this.startPos = 0;
                 this.currentTranslate = 0;
                 this.prevTranslate = 0;
                 this.isTransitioning = false;
-                
+
                 this.autoplayInterval = null;
                 this.autoplaySpeed = 3500;
-                
+
                 this.init();
             }
-            
+
             init() {
                 // Clone first and last slides for true infinite loop without jumps
                 const firstClone = this.slides[0].cloneNode(true);
                 const lastClone = this.slides[this.slides.length - 1].cloneNode(true);
-                
+
                 firstClone.classList.add('clone');
                 lastClone.classList.add('clone');
-                
+
                 this.track.appendChild(firstClone);
                 this.track.insertBefore(lastClone, this.slides[0]);
-                
+
                 this.allSlides = Array.from(this.track.children);
-                
+
                 this.createPagination();
                 this.updatePagination();
-                
+
                 // Initial Positioning
                 window.requestAnimationFrame(() => {
                     this.updateSlideWidth();
                     this.setPositionByIndex();
                 });
-                
+
                 // Event Listeners
                 window.addEventListener('resize', () => {
                     this.updateSlideWidth();
                     this.setPositionByIndex();
                 });
-                
-                if(this.nextBtn) {
-                    this.nextBtn.addEventListener('click', () => { 
-                        this.stopAutoplay(); 
-                        this.moveNext(); 
-                        this.startAutoplay(); 
+
+                if (this.nextBtn) {
+                    this.nextBtn.addEventListener('click', () => {
+                        this.stopAutoplay();
+                        this.moveNext();
+                        this.startAutoplay();
                     });
                 }
-                
-                if(this.prevBtn) {
-                    this.prevBtn.addEventListener('click', () => { 
-                        this.stopAutoplay(); 
-                        this.movePrev(); 
-                        this.startAutoplay(); 
+
+                if (this.prevBtn) {
+                    this.prevBtn.addEventListener('click', () => {
+                        this.stopAutoplay();
+                        this.movePrev();
+                        this.startAutoplay();
                     });
                 }
-                
+
                 this.track.addEventListener('transitionend', () => this.handleTransitionEnd());
-                
+
                 // Touch Events (Swipe)
-                this.track.addEventListener('touchstart', this.touchStart.bind(this), {passive: true});
-                this.track.addEventListener('touchmove', this.touchMove.bind(this), {passive: true});
+                this.track.addEventListener('touchstart', this.touchStart.bind(this), { passive: true });
+                this.track.addEventListener('touchmove', this.touchMove.bind(this), { passive: true });
                 this.track.addEventListener('touchend', this.touchEnd.bind(this));
-                
+
                 // Mouse Events (Drag)
                 this.track.addEventListener('mousedown', this.touchStart.bind(this));
                 this.track.addEventListener('mousemove', this.touchMove.bind(this));
                 this.track.addEventListener('mouseup', this.touchEnd.bind(this));
                 this.track.addEventListener('mouseleave', () => {
-                    if(this.isDragging) this.touchEnd();
+                    if (this.isDragging) this.touchEnd();
                     this.startAutoplay();
                 });
                 this.track.addEventListener('mouseenter', () => this.stopAutoplay());
-                
+
                 this.startAutoplay();
             }
-            
+
             updateSlideWidth() {
                 const slide = this.allSlides[0];
                 const style = window.getComputedStyle(slide);
                 this.slideWidth = slide.getBoundingClientRect().width + parseFloat(style.marginLeft) + parseFloat(style.marginRight);
             }
-            
+
             createPagination() {
                 if (!this.pagination) return;
                 this.pagination.innerHTML = '';
@@ -3750,41 +4161,41 @@
                     this.pagination.appendChild(dot);
                 });
             }
-            
+
             updatePagination() {
                 if (!this.pagination) return;
                 const dots = Array.from(this.pagination.querySelectorAll('.wcu-dot'));
                 dots.forEach(dot => dot.classList.remove('active'));
-                
+
                 let activeIndex = this.currentIndex - 1;
                 if (this.currentIndex === 0) activeIndex = this.slides.length - 1;
                 if (this.currentIndex === this.slides.length + 1) activeIndex = 0;
-                
+
                 if (dots[activeIndex]) dots[activeIndex].classList.add('active');
             }
-            
+
             moveNext() {
                 if (this.isTransitioning) return;
                 this.currentIndex++;
                 this.updateCarousel();
             }
-            
+
             movePrev() {
                 if (this.isTransitioning) return;
                 this.currentIndex--;
                 this.updateCarousel();
             }
-            
+
             updateCarousel() {
                 this.isTransitioning = true;
                 this.track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
                 this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
                 this.updatePagination();
             }
-            
+
             handleTransitionEnd() {
                 this.isTransitioning = false;
-                
+
                 // Silent jump back to real slides for infinite loop
                 if (this.currentIndex === 0) {
                     this.track.style.transition = 'none';
@@ -3796,16 +4207,16 @@
                     this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
                 }
             }
-            
+
             setPositionByIndex() {
                 this.track.style.transition = 'none';
                 this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
             }
-            
+
             getPositionX(event) {
                 return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
             }
-            
+
             touchStart(event) {
                 if (this.isTransitioning) return;
                 this.stopAutoplay();
@@ -3814,7 +4225,7 @@
                 this.prevTranslate = -this.currentIndex * this.slideWidth;
                 this.track.style.transition = 'none';
             }
-            
+
             touchMove(event) {
                 if (!this.isDragging) return;
                 const currentPosition = this.getPositionX(event);
@@ -3822,33 +4233,33 @@
                 this.currentTranslate = this.prevTranslate + diff;
                 this.track.style.transform = `translateX(${this.currentTranslate}px)`;
             }
-            
+
             touchEnd() {
                 if (!this.isDragging) return;
                 this.isDragging = false;
-                
+
                 const movedBy = this.currentTranslate - this.prevTranslate;
-                
+
                 // Swipe threshold ~50px
                 if (movedBy < -50 && this.currentIndex < this.allSlides.length - 1) {
                     this.currentIndex += 1;
                 } else if (movedBy > 50 && this.currentIndex > 0) {
                     this.currentIndex -= 1;
                 }
-                
+
                 this.updateCarousel();
                 this.startAutoplay();
             }
-            
+
             startAutoplay() {
                 this.stopAutoplay();
                 this.autoplayInterval = setInterval(() => {
                     this.moveNext();
                 }, this.autoplaySpeed);
             }
-            
+
             stopAutoplay() {
-                if(this.autoplayInterval) {
+                if (this.autoplayInterval) {
                     clearInterval(this.autoplayInterval);
                 }
             }
@@ -3858,11 +4269,11 @@
         window.addEventListener('DOMContentLoaded', () => {
             const featureWrapper = document.getElementById('wcuFeatureCarousel');
             const imageWrapper = document.getElementById('wcuImageCarousel');
-            
+
             // Short timeout ensures CSS flex widths are correctly calculated on mobile before measuring
             setTimeout(() => {
                 if (featureWrapper) new AlpineWCUCarousel(featureWrapper);
-                if (imageWrapper) new AlpineWCUCarousel(imageWrapper);
+                // imageWrapper explicitly excluded for CSS Marquee animation
             }, 100);
         });
 
@@ -3872,97 +4283,97 @@
                 this.wrapper = wrapper;
                 this.track = wrapper.querySelector('.carousel-slides');
                 if (!this.track) return;
-                
+
                 this.slides = Array.from(this.track.children);
                 this.prevBtn = wrapper.querySelector('.arrow-prev');
                 this.nextBtn = wrapper.querySelector('.arrow-next');
                 this.pagination = wrapper.querySelector('.carousel-dots');
-                
+
                 if (this.slides.length === 0) return;
-                
+
                 this.currentIndex = 1;
                 this.isDragging = false;
                 this.startPos = 0;
                 this.currentTranslate = 0;
                 this.prevTranslate = 0;
                 this.isTransitioning = false;
-                
+
                 this.autoplayInterval = null;
                 this.autoplaySpeed = 3500;
-                
+
                 this.init();
             }
-            
+
             init() {
                 // Clone first and last slides for true infinite loop
                 const firstClone = this.slides[0].cloneNode(true);
                 const lastClone = this.slides[this.slides.length - 1].cloneNode(true);
-                
+
                 firstClone.classList.add('clone');
                 lastClone.classList.add('clone');
-                
+
                 this.track.appendChild(firstClone);
                 this.track.insertBefore(lastClone, this.slides[0]);
-                
+
                 this.allSlides = Array.from(this.track.children);
-                
+
                 this.createPagination();
                 this.updatePagination();
-                
+
                 // Initial Positioning
                 window.requestAnimationFrame(() => {
                     this.updateSlideWidth();
                     this.setPositionByIndex();
                 });
-                
+
                 // Event Listeners
                 window.addEventListener('resize', () => {
                     this.updateSlideWidth();
                     this.setPositionByIndex();
                 });
-                
-                if(this.nextBtn) {
+
+                if (this.nextBtn) {
                     this.nextBtn.addEventListener('click', (e) => {
                         e.preventDefault(); e.stopPropagation();
-                        this.stopAutoplay(); 
-                        this.moveNext(); 
-                        this.startAutoplay(); 
+                        this.stopAutoplay();
+                        this.moveNext();
+                        this.startAutoplay();
                     });
                 }
-                
-                if(this.prevBtn) {
+
+                if (this.prevBtn) {
                     this.prevBtn.addEventListener('click', (e) => {
                         e.preventDefault(); e.stopPropagation();
-                        this.stopAutoplay(); 
-                        this.movePrev(); 
-                        this.startAutoplay(); 
+                        this.stopAutoplay();
+                        this.movePrev();
+                        this.startAutoplay();
                     });
                 }
-                
+
                 this.track.addEventListener('transitionend', () => this.handleTransitionEnd());
-                
+
                 // Touch Events (Swipe)
-                this.track.addEventListener('touchstart', this.touchStart.bind(this), {passive: true});
-                this.track.addEventListener('touchmove', this.touchMove.bind(this), {passive: true});
+                this.track.addEventListener('touchstart', this.touchStart.bind(this), { passive: true });
+                this.track.addEventListener('touchmove', this.touchMove.bind(this), { passive: true });
                 this.track.addEventListener('touchend', this.touchEnd.bind(this));
-                
+
                 // Mouse Events (Drag)
                 this.track.addEventListener('mousedown', this.touchStart.bind(this));
                 this.track.addEventListener('mousemove', this.touchMove.bind(this));
                 this.track.addEventListener('mouseup', this.touchEnd.bind(this));
                 this.track.addEventListener('mouseleave', () => {
-                    if(this.isDragging) this.touchEnd();
+                    if (this.isDragging) this.touchEnd();
                     this.startAutoplay();
                 });
                 this.track.addEventListener('mouseenter', () => this.stopAutoplay());
-                
+
                 this.startAutoplay();
             }
-            
+
             updateSlideWidth() {
                 this.slideWidth = this.allSlides[0].getBoundingClientRect().width;
             }
-            
+
             createPagination() {
                 if (!this.pagination) return;
                 this.pagination.innerHTML = '';
@@ -3980,41 +4391,41 @@
                     this.pagination.appendChild(dot);
                 });
             }
-            
+
             updatePagination() {
                 if (!this.pagination) return;
                 const dots = Array.from(this.pagination.querySelectorAll('.carousel-dot'));
                 dots.forEach(dot => dot.classList.remove('active'));
-                
+
                 let activeIndex = this.currentIndex - 1;
                 if (this.currentIndex === 0) activeIndex = this.slides.length - 1;
                 if (this.currentIndex === this.slides.length + 1) activeIndex = 0;
-                
+
                 if (dots[activeIndex]) dots[activeIndex].classList.add('active');
             }
-            
+
             moveNext() {
                 if (this.isTransitioning) return;
                 this.currentIndex++;
                 this.updateCarousel();
             }
-            
+
             movePrev() {
                 if (this.isTransitioning) return;
                 this.currentIndex--;
                 this.updateCarousel();
             }
-            
+
             updateCarousel() {
                 this.isTransitioning = true;
                 this.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
                 this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
                 this.updatePagination();
             }
-            
+
             handleTransitionEnd() {
                 this.isTransitioning = false;
-                
+
                 // Silent jump back to real slides for infinite loop
                 if (this.currentIndex === 0) {
                     this.track.style.transition = 'none';
@@ -4026,16 +4437,16 @@
                     this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
                 }
             }
-            
+
             setPositionByIndex() {
                 this.track.style.transition = 'none';
                 this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
             }
-            
+
             getPositionX(event) {
                 return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
             }
-            
+
             touchStart(event) {
                 if (this.isTransitioning) return;
                 this.stopAutoplay();
@@ -4044,7 +4455,7 @@
                 this.prevTranslate = -this.currentIndex * this.slideWidth;
                 this.track.style.transition = 'none';
             }
-            
+
             touchMove(event) {
                 if (!this.isDragging) return;
                 const currentPosition = this.getPositionX(event);
@@ -4052,32 +4463,32 @@
                 this.currentTranslate = this.prevTranslate + diff;
                 this.track.style.transform = `translateX(${this.currentTranslate}px)`;
             }
-            
+
             touchEnd() {
                 if (!this.isDragging) return;
                 this.isDragging = false;
-                
+
                 const movedBy = this.currentTranslate - this.prevTranslate;
-                
+
                 if (movedBy < -50 && this.currentIndex < this.allSlides.length - 1) {
                     this.currentIndex += 1;
                 } else if (movedBy > 50 && this.currentIndex > 0) {
                     this.currentIndex -= 1;
                 }
-                
+
                 this.updateCarousel();
                 this.startAutoplay();
             }
-            
+
             startAutoplay() {
                 this.stopAutoplay();
                 this.autoplayInterval = setInterval(() => {
                     this.moveNext();
                 }, this.autoplaySpeed);
             }
-            
+
             stopAutoplay() {
-                if(this.autoplayInterval) {
+                if (this.autoplayInterval) {
                     clearInterval(this.autoplayInterval);
                 }
             }
@@ -4092,4 +4503,5 @@
         });
     </script>
 </body>
+
 </html>
