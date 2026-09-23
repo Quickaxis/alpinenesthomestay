@@ -33,11 +33,11 @@ Instagram
 
 Location
 
-Dibrugarh, Assam
+Alpine Nest, Amolapatty, Dibrugarh, Assam 786003
 
 Google Maps
 
-https://maps.app.goo.gl/cYDumAU53dBCifBR8
+https://maps.app.goo.gl/7v4AE7jQxCSDURGFA?g_st=aw
 
 ---
 
