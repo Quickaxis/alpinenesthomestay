@@ -12,14 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
         rel="stylesheet">
 
     <style>
         /* --- DESIGN SYSTEM TOKENS --- */
         :root {
-            --font-heading: 'Poppins', sans-serif;
-            --font-body: 'Poppins', sans-serif;
+            --font-display: 'DM Sans', sans-serif;
+            --font-body: 'Manrope', sans-serif;
 
             /* Color Palette */
             --bg-primary: #F8F7F2;
@@ -63,8 +63,20 @@
             overflow-x: hidden;
         }
 
-        body {
+        body,
+        button,
+        input,
+        textarea,
+        select,
+        a,
+        p,
+        span,
+        li,
+        label {
             font-family: var(--font-body);
+        }
+
+        body {
             background-color: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
@@ -89,9 +101,21 @@
         h1,
         h2,
         h3,
+        h4,
+        .display-heading,
+        .hero-title,
+        .section-title,
+        .room-title {
+            font-family: var(--font-display);
+        }
+
+        h1,
+        h2,
+        h3,
         h4 {
-            font-family: var(--font-heading);
-            font-weight: 600;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
 
         a {
@@ -162,7 +186,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 24px;
             font-weight: 700;
         }
@@ -186,7 +210,7 @@
         }
 
         .nav-links a {
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 11px;
             font-weight: 600;
             letter-spacing: 0.1em;
@@ -218,7 +242,7 @@
         .btn-nav-book {
             background: var(--accent-primary);
             color: var(--text-light);
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.1em;
@@ -308,7 +332,7 @@
         }
 
         .mobile-menu a {
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 32px;
             color: var(--text-primary);
         }
@@ -335,7 +359,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.2em;
@@ -345,11 +369,13 @@
         }
 
         .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
             font-size: clamp(48px, 6vw, 76px);
             line-height: 1.05;
             color: var(--text-primary);
             margin-bottom: 12px;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.5px;
         }
 
         .hero-title span {
@@ -358,11 +384,11 @@
         }
 
         .hero-subtitle {
-            font-family: var(--font-heading);
+            font-family: var(--font-display);
             font-size: 24px;
             color: var(--accent-secondary);
             margin-bottom: 16px;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .hero-desc {
@@ -382,7 +408,7 @@
         .btn-primary {
             background: var(--accent-primary);
             color: var(--text-light);
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.1em;
@@ -409,7 +435,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--text-primary);
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.1em;
@@ -526,7 +552,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 11px;
             font-weight: 700;
             color: var(--text-primary);
@@ -690,7 +716,7 @@
         }
 
         .section-header .section-tag {
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.2em;
@@ -725,7 +751,7 @@
         }
 
         .wcu-eyebrow {
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.2em;
@@ -740,8 +766,8 @@
             color: var(--text-primary);
             margin-bottom: 20px;
             line-height: 1.1;
-            font-family: var(--font-heading);
-            font-weight: 600;
+            font-family: var(--font-display);
+            font-weight: 700;
         }
 
         .wcu-subtitle {
@@ -802,7 +828,7 @@
         }
 
         .wcu-card-num {
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 32px;
             font-weight: 400;
             color: var(--accent-secondary);
@@ -827,9 +853,9 @@
         }
 
         .wcu-card-title {
-            font-family: var(--font-heading);
+            font-family: var(--font-display);
             font-size: 26px;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 14px;
             line-height: 1.2;
@@ -1090,7 +1116,7 @@
         }
 
         .room-type {
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 10px;
             font-weight: 700;
             letter-spacing: 0.15em;
@@ -1112,7 +1138,7 @@
         }
 
         .room-price {
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 28px;
             font-weight: 800;
             color: var(--accent-secondary);
@@ -1176,7 +1202,7 @@
             height: 48px;
             /* Matching height explicitly */
             border-radius: 16px;
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.05em;
@@ -1303,7 +1329,7 @@
             padding: 10px 24px;
             border-radius: var(--radius-pill);
             cursor: pointer;
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.05em;
@@ -1382,7 +1408,7 @@
             padding: 16px 36px;
             border-radius: var(--radius-pill);
             cursor: pointer;
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.05em;
@@ -1586,7 +1612,7 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 32px;
             font-weight: 600;
         }
@@ -1607,7 +1633,7 @@
         }
 
         .footer-links-col h4 {
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.15em;
@@ -1899,7 +1925,7 @@
             }
 
             .hero-indicator {
-                font-family: var(--font-heading) !important;
+                font-family: var(--font-body) !important;
                 font-size: 11px !important;
                 font-weight: 700 !important;
                 text-transform: uppercase !important;
@@ -2162,7 +2188,7 @@
 
         .modal-badge {
             display: inline-block;
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 10px;
             font-weight: 700;
             letter-spacing: 0.25em;
@@ -2172,7 +2198,7 @@
         }
 
         .modal-brand-label {
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 11px;
             font-weight: 600;
             letter-spacing: 0.1em;
@@ -2301,7 +2327,7 @@
         }
 
         .tile-number {
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.02em;
