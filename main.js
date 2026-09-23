@@ -135,11 +135,11 @@ const lightboxData = [
   { src: 'photos/skylinesuite7.jpg', caption: 'Skyline Suite (Luxury 1BHK) - Living & Entrance Lounge' },
   
   // Capsule Studio
-  { src: 'photos/capsule1.jpg', caption: 'Capsule Studio (Luxury 1RK) - Futuristic Theme Bed' },
-  { src: 'photos/capsule2.jpg', caption: 'Capsule Studio (Luxury 1RK) - Ambient Cozy Lighting' },
-  { src: 'photos/capsule3.jpg', caption: 'Capsule Studio (Luxury 1RK) - Curved Wood Detailing' },
-  { src: 'photos/capsule4.jpg', caption: 'Capsule Studio (Luxury 1RK) - Dressing & Storage Frame' },
-  { src: 'photos/capsule5.jpg', caption: 'Capsule Studio (Luxury 1RK) - In-room Kitchen Set' },
+  { src: 'photos/1rk.jpg', caption: 'Capsule Studio (Luxury 1RK) - Main Suite & Workspace' },
+  { src: 'photos/1rk2.jpg', caption: 'Capsule Studio (Luxury 1RK) - Ambient Cozy Lighting & Niches' },
+  { src: 'photos/1rk3.jpg', caption: 'Capsule Studio (Luxury 1RK) - Kitchenette & Bar' },
+  { src: 'photos/1rk4.jpg', caption: 'Capsule Studio (Luxury 1RK) - Double Bed & Smart TV' },
+  { src: 'photos/1rk5.jpg', caption: 'Capsule Studio (Luxury 1RK) - Architectural Perspective' },
   
   // Cozy 2BHK Studio
   { src: 'photos/2bhk1.jpg', caption: 'Cozy Studio (Luxury 2BHK) - Master Bedroom' },

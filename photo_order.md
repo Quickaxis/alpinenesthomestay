@@ -10,11 +10,11 @@
 7. skylinesuite7.jpg
 
 ## Capsule Studio (1RK)
-1. capsule1.jpg
-2. capsule2.jpg
-3. capsule3.jpg
-4. capsule4.jpg
-5. capsule5.jpg
+1. 1rk.jpg
+2. 1rk2.jpg
+3. 1rk3.jpg
+4. 1rk4.jpg
+5. 1rk5.jpg
 
 ## Cozy 2BHK Studio
 1. 2bhk1.jpg
