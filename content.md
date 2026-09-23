@@ -189,10 +189,6 @@ Amenities
 
 ✓ Luxury Bedding
 
-Note
-
-Refrigerator is NOT available in this room.
-
 Perfect for
 
 Solo Travellers
