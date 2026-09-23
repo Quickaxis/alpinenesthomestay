@@ -9,13 +9,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Manrope:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     
     <style>
         /* --- DESIGN SYSTEM TOKENS --- */
         :root {
-            --font-heading: 'Cormorant Garamond', serif;
-            --font-body: 'Manrope', sans-serif;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Poppins', sans-serif;
             
             /* Color Palette */
             --bg-primary: #F8F7F2;        /* Warm Ivory */
@@ -47,6 +47,8 @@
 
         html {
             scroll-behavior: smooth;
+            max-width: 100%;
+            overflow-x: hidden;
         }
 
         body {
@@ -55,6 +57,7 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+            max-width: 100%;
         }
 
         /* Noise Texture Overlay for Premium Vibe */
@@ -158,7 +161,7 @@
         }
 
         .nav-links a {
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 11px;
             font-weight: 600;
             letter-spacing: 0.1em;
@@ -190,7 +193,7 @@
         .btn-nav-book {
             background: var(--accent-primary);
             color: var(--text-light);
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.1em;
@@ -297,7 +300,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.2em;
@@ -344,7 +347,7 @@
         .btn-primary {
             background: var(--accent-primary);
             color: var(--text-light);
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.1em;
@@ -371,7 +374,7 @@
         .btn-secondary {
             background: transparent;
             color: var(--text-primary);
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.1em;
@@ -487,7 +490,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 11px;
             font-weight: 700;
             color: var(--text-primary);
@@ -649,7 +652,7 @@
         }
 
         .section-header .section-tag {
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.2em;
@@ -669,58 +672,211 @@
             color: var(--accent-primary);
         }
 
-        /* Premium Apple-Style Feature Grid */
-        .feature-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 24px;
-            max-width: 1180px;
-            margin: 0 auto;
-        }
-
-        .feature-card {
-            background-color: var(--bg-secondary);
-            border-radius: 28px;
-            border: 1px solid rgba(79, 101, 77, 0.12);
-            padding: 34px;
-            width: calc(33.333% - 16px);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            transition: var(--transition-smooth);
-            position: relative;
+        /* --- REDESIGNED WHY CHOOSE US SECTION --- */
+        .wcu-section {
+            background: var(--bg-primary);
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(14, 21, 18, 0.03);
+            padding: 115px 0;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 16px 40px rgba(14, 21, 18, 0.08);
-            border-color: rgba(79, 101, 77, 0.25);
+        .wcu-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 60px;
+            padding: 0 24px;
         }
 
-        .feature-card svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--accent-primary);
-            margin-bottom: 20px;
-            flex-shrink: 0;
-        }
-
-        .feature-card h3 {
-            font-size: 20px;
+        .wcu-eyebrow {
+            font-family: var(--font-heading);
+            font-size: 11px;
             font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 10px;
-            font-family: var(--font-body);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            margin-bottom: 16px;
+            display: block;
         }
 
-        .feature-card p {
-            font-size: 14px;
+        .wcu-title {
+            font-size: clamp(36px, 5vw, 56px);
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+
+        .wcu-subtitle {
+            font-size: 16px;
             color: var(--text-muted);
             line-height: 1.6;
+        }
+
+        /* Carousel */
+        .wcu-carousel-wrapper {
+            position: relative;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .wcu-carousel-viewport {
+            overflow: hidden;
+            width: 100%;
+            cursor: grab;
+        }
+        
+        .wcu-carousel-viewport:active {
+            cursor: grabbing;
+        }
+
+        .wcu-carousel-track {
+            display: flex;
+            padding-bottom: 20px;
+            will-change: transform;
+            /* Transition applied via JS when gliding */
+        }
+
+        .wcu-card {
+            flex: 0 0 calc(33.333% - 24px);
+            margin: 0 12px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-card);
+            padding: 40px;
+            border: 1px solid rgba(93, 122, 85, 0.12);
+            box-shadow: 0 10px 30px rgba(14, 21, 18, 0.03);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .wcu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(14, 21, 18, 0.08);
+            border-color: rgba(93, 122, 85, 0.25);
+        }
+
+        .wcu-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .wcu-card-num {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            font-weight: 400;
+            color: var(--accent-secondary);
+            opacity: 0.6;
+            line-height: 1;
+        }
+
+        .wcu-card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(93, 122, 85, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wcu-card-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--accent-primary);
+        }
+
+        .wcu-card-title {
+            font-family: var(--font-heading);
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+
+        .wcu-card-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Carousel Controls */
+        .wcu-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .wcu-btn-arrow {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid rgba(93, 122, 85, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            color: var(--text-primary);
+            z-index: 10;
+        }
+
+        .wcu-btn-arrow:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            color: #FFFFFF;
+        }
+
+        .wcu-btn-arrow svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .wcu-pagination {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .wcu-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(93, 122, 85, 0.2);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .wcu-dot.active {
+            background: var(--accent-primary);
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        /* Image Carousel */
+        .wcu-image-carousel-wrapper {
+            margin-top: 80px;
+        }
+
+        .wcu-img-slide {
+            flex: 0 0 500px; /* Fixed width on desktop */
+            margin: 0 12px;
+        }
+
+        .wcu-img-slide img {
+            height: 340px;
+            width: 100%;
+            border-radius: 24px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(14, 21, 18, 0.05);
+            pointer-events: none; /* Prevents dragging ghost */
         }
 
         /* --- ROOMS SECTION --- */
@@ -865,7 +1021,7 @@
         }
 
         .room-type {
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 10px;
             font-weight: 700;
             letter-spacing: 0.15em;
@@ -887,7 +1043,7 @@
         }
 
         .room-price {
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 28px;
             font-weight: 800;
             color: var(--accent-secondary);
@@ -950,7 +1106,7 @@
             border: none;
             height: 48px; /* Matching height explicitly */
             border-radius: 16px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.05em;
@@ -1072,7 +1228,7 @@
             padding: 10px 24px;
             border-radius: var(--radius-pill);
             cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.05em;
@@ -1148,7 +1304,7 @@
             padding: 16px 36px;
             border-radius: var(--radius-pill);
             cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.05em;
@@ -1370,7 +1526,7 @@
         }
 
         .footer-links-col h4 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.15em;
@@ -1653,7 +1809,7 @@
             }
 
             .hero-indicator {
-                font-family: 'Montserrat', sans-serif !important;
+                font-family: var(--font-heading) !important;
                 font-size: 11px !important;
                 font-weight: 700 !important;
                 text-transform: uppercase !important;
@@ -1755,36 +1911,43 @@
                 text-align: center;
             }
 
-            /* Mobile Feature grid override */
-            .feature-grid {
-                display: flex;
-                flex-direction: column;
-                gap: 14px;
+            /* Mobile WCU Carousel overrides */
+            .wcu-section {
+                padding: 60px 0 !important;
             }
 
-            .feature-card {
-                width: 100% !important;
-                padding: 22px !important;
+            .wcu-title {
+                font-size: 28px;
+            }
+
+            .wcu-carousel-track {
+                padding-bottom: 10px;
+            }
+
+            .wcu-card {
+                flex: 0 0 calc(100% - 24px); 
+                margin: 0 12px;
+                padding: 32px 24px;
                 border-radius: 24px;
-                min-height: auto !important;
-                height: auto !important;
             }
 
-            .feature-card h3 {
-                font-size: 18px;
-                line-height: 1.2;
-                margin-bottom: 6px;
+            .wcu-card-title {
+                font-size: 22px;
+            }
+            
+            .wcu-image-carousel-wrapper {
+                margin-top: 60px;
             }
 
-            .feature-card p {
-                font-size: 13.5px;
-                line-height: 1.45;
+            .wcu-img-slide {
+                flex: 0 0 calc(100% - 24px);
+                margin: 0 12px;
             }
 
-            .feature-card svg {
-                width: 20px !important;
-                height: 20px !important;
-                margin-bottom: 12px !important;
+            .wcu-img-slide img {
+                height: 260px;
+                width: 100%;
+                object-fit: cover;
             }
 
             /* Mobile About grid overrides */
@@ -1900,7 +2063,7 @@
 
         .modal-badge {
             display: inline-block;
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 10px;
             font-weight: 700;
             letter-spacing: 0.25em;
@@ -1910,7 +2073,7 @@
         }
 
         .modal-brand-label {
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 11px;
             font-weight: 600;
             letter-spacing: 0.1em;
@@ -2038,7 +2201,7 @@
         }
 
         .tile-number {
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-heading);
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.02em;
@@ -2289,69 +2452,104 @@
         </div>
     </section>
 
-    <!-- --- WHY CHOOSE US / FEATURE GRID --- -->
-    <section id="why-choose-us">
+    <!-- --- WHY CHOOSE US / FEATURE CAROUSEL SECTION --- -->
+    <section id="why-choose-us" class="wcu-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Distinctive Comforts</span>
-                <h2>Why Choose <span>Alpine Nest</span></h2>
+            <!-- 1. Section Intro -->
+            <div class="wcu-header">
+                <span class="wcu-eyebrow">WHY CHOOSE ALPINE NEST</span>
+                <h2 class="wcu-title">Why Alpine Nest?</h2>
+                <p class="wcu-subtitle">A thoughtfully designed homestay in the heart of Dibrugarh, created for comfort, privacy and modern living.</p>
             </div>
             
-            <div class="feature-grid">
-                <!-- Card 1 -->
-                <div class="feature-card" data-glow>
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
-                    <h3>Capsule Theme Homestay</h3>
-                    <p>Enjoy a futuristic, cozy living layout custom-engineered to optimize comfort, ventilation, and style. An architectural marvel right in the heart of Assam.</p>
+            <!-- 2. Horizontal Feature Carousel -->
+            <div class="wcu-carousel-wrapper" id="wcuFeatureCarousel">
+                <div class="wcu-carousel-viewport">
+                    <div class="wcu-carousel-track">
+                        <!-- Cards 1 to 5 (Genuine Features) -->
+                        <div class="wcu-card">
+                            <div class="wcu-card-header">
+                                <span class="wcu-card-num">01</span>
+                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg></div>
+                            </div>
+                            <h3 class="wcu-card-title">Capsule Theme Homestay</h3>
+                            <p class="wcu-card-desc">A distinctive capsule-inspired homestay experience with thoughtfully designed spaces and a unique architectural character.</p>
+                        </div>
+
+                        <div class="wcu-card">
+                            <div class="wcu-card-header">
+                                <span class="wcu-card-num">02</span>
+                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+                            </div>
+                            <h3 class="wcu-card-title">1BHK & 2BHK Spaces</h3>
+                            <p class="wcu-card-desc">Comfortable accommodation options designed for couples, families, groups and longer stays.</p>
+                        </div>
+
+                        <div class="wcu-card">
+                            <div class="wcu-card-header">
+                                <span class="wcu-card-num">03</span>
+                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24"><path d="M8.1 14.1c.4-.4.4-1.1 0-1.5-.4-.4-1.1-.4-1.5 0L5 14.1l-1.6-1.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l2.3 2.3c.4.4 1.1.4 1.5 0l2.4-2.3z"/></svg></div>
+                            </div>
+                            <h3 class="wcu-card-title">Private Kitchen</h3>
+                            <p class="wcu-card-desc">Enjoy the convenience of having your own kitchen and cooking facilities during your stay.</p>
+                        </div>
+
+                        <div class="wcu-card">
+                            <div class="wcu-card-header">
+                                <span class="wcu-card-num">04</span>
+                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm1 11h-2v-2h2v2zm0-4h-2V8h2v2z"/></svg></div>
+                            </div>
+                            <h3 class="wcu-card-title">Premium Interiors</h3>
+                            <p class="wcu-card-desc">Warm lighting, custom details, contemporary furnishings and carefully designed interiors.</p>
+                        </div>
+
+                        <div class="wcu-card">
+                            <div class="wcu-card-header">
+                                <span class="wcu-card-num">05</span>
+                                <div class="wcu-card-icon"><svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg></div>
+                            </div>
+                            <h3 class="wcu-card-title">Dedicated Workspace</h3>
+                            <p class="wcu-card-desc">Ergonomic desks and high-speed enterprise WiFi built for remote professionals.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="feature-card" data-glow>
-                    <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm1 11h-2v-2h2v2zm0-4h-2V8h2v2z"/></svg>
-                    <h3>Premium Interiors</h3>
-                    <p>Plush sofas, custom wood details, high-end upholstery, and warm ambient lighting systems designed by hospitality experts.</p>
+                <div class="wcu-controls">
+                    <button class="wcu-btn-arrow prev" aria-label="Previous feature">
+                        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                    </button>
+                    <div class="wcu-pagination">
+                        <!-- Dots populated by JS -->
+                    </div>
+                    <button class="wcu-btn-arrow next" aria-label="Next feature">
+                        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                    </button>
                 </div>
+            </div>
 
-                <!-- Card 3 -->
-                <div class="feature-card" data-glow>
-                    <svg viewBox="0 0 24 24"><path d="M8.1 14.1c.4-.4.4-1.1 0-1.5-.4-.4-1.1-.4-1.5 0L5 14.1l-1.6-1.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l2.3 2.3c.4.4 1.1.4 1.5 0l2.4-2.3z"/></svg>
-                    <h3>Private Kitchen</h3>
-                    <p>Cook meals with your own stovetop, cookware, and basic condiments.</p>
+            <!-- 3. Image Carousel -->
+            <div class="wcu-carousel-wrapper wcu-image-carousel-wrapper" id="wcuImageCarousel">
+                <div class="wcu-carousel-viewport">
+                    <div class="wcu-carousel-track">
+                        <div class="wcu-img-slide"><img src="photos/skylinesuite1.jpg" alt="Skyline Suite" loading="lazy" decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/capsule2.jpg" alt="Capsule Studio" loading="lazy" decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/2bhk3.jpg" alt="Family Space" loading="lazy" decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/2bhk5.jpg" alt="Living Area" loading="lazy" decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/2bhk6.jpg" alt="Kitchen interior" loading="lazy" decoding="async"></div>
+                        <div class="wcu-img-slide"><img src="photos/skylinesuite2.jpg" alt="Bedroom interior" loading="lazy" decoding="async"></div>
+                    </div>
                 </div>
-
-                <!-- Card 4 -->
-                <div class="feature-card" data-glow>
-                    <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
-                    <h3>Free Parking</h3>
-                    <p>Secure on-premise parking spaces available for cars and bikes.</p>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="feature-card" data-glow>
-                    <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
-                    <h3>Dedicated Workspace</h3>
-                    <p>Ergonomic desks and high-speed enterprise WiFi built for remote professionals, digital nomads, and corporate consultants.</p>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="feature-card" data-glow>
-                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                    <h3>Family Friendly</h3>
-                    <p>Spacious floorplans, children-friendly safety margins, and cozy lounge rooms.</p>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="feature-card" data-glow>
-                    <svg viewBox="0 0 24 24"><path d="M16.5 6V4.5C16.5 3.67 15.83 3 15 3H9c-.83 0-1.5.67-1.5 1.5V6H3v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6h-4.5zm-7.5-1.5h6V6H9V4.5zM19 16H5V7.5h14V16z"/></svg>
-                    <h3>Hygienic Rooms</h3>
-                    <p>Strict cleaning checklists and certified sanitization standards before check-ins.</p>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="feature-card" data-glow>
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                    <h3>Work & Leisure</h3>
-                    <p>Conveniently access local sights, premium tea estates, and corporate hubs. Enjoy the best of both worlds during your visit to Dibrugarh.</p>
+                
+                <div class="wcu-controls">
+                    <button class="wcu-btn-arrow prev" aria-label="Previous image">
+                        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                    </button>
+                    <div class="wcu-pagination">
+                        <!-- Dots populated by JS -->
+                    </div>
+                    <button class="wcu-btn-arrow next" aria-label="Next image">
+                        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -2376,7 +2574,6 @@
                             <div class="carousel-slide"><img src="photos/skylinesuite2.jpg" alt="Skyline Suite Dining" width="600" height="400" loading="lazy" decoding="async"></div>
                             <div class="carousel-slide"><img src="photos/skylinesuite3.jpg" alt="Skyline Suite Window" width="600" height="400" loading="lazy" decoding="async"></div>
                             <div class="carousel-slide"><img src="photos/skylinesuite6.jpg" alt="Skyline Suite Kitchen" width="600" height="400" loading="lazy" decoding="async"></div>
-                            <div class="carousel-slide"><img src="photos/skylinesuite7.jpg" alt="Skyline Suite Bath" width="600" height="400" loading="lazy" decoding="async"></div>
                         </div>
                         <button class="carousel-arrow arrow-prev" aria-label="Previous Slide">
                             <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
@@ -2518,6 +2715,51 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Room Card 4: Niribili -->
+                <div class="room-card" id="room-niribili">
+                    <div class="room-carousel" id="niribili-carousel" data-carousel-id="niribili" data-infinite="true">
+                        <div class="carousel-slides">
+                            <div class="carousel-slide"><img src="photos/niribili1.jpg" alt="Niribili Image 01" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/niribili2.jpg" alt="Niribili Image 02" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/niribili3.jpg" alt="Niribili Image 03" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/niribili4.jpg" alt="Niribili Image 04" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/niribili5.jpg" alt="Niribili Image 05" loading="lazy" decoding="async"></div>
+                            <div class="carousel-slide"><img src="photos/niribili6.jpg" alt="Niribili Image 06" loading="lazy" decoding="async"></div>
+                        </div>
+                        <button class="carousel-arrow arrow-prev" aria-label="Previous Slide">
+                            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                        </button>
+                        <button class="carousel-arrow arrow-next" aria-label="Next Slide">
+                            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+                        </button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="room-body">
+                        <div class="room-meta">
+                            <span class="room-type">Premium Retreat</span>
+                        </div>
+                        <h3 class="room-title">Niribili</h3>
+                        <ul class="room-amenities-list">
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>High-Speed WiFi</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Air Conditioning</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Attached Bath</li>
+                            <li class="room-amenity-item"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Free Parking</li>
+                        </ul>
+                        <div class="room-note" style="margin-bottom: auto; margin-top: 16px;">
+                            Experience a peaceful and quiet stay with thoughtful interiors in this calm retreat in Dibrugarh.
+                        </div>
+                        <div class="room-actions" style="margin-top: 24px;">
+                            <button class="btn-room-whatsapp" onclick="directRoomWhatsApp('Niribili')">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-1.39-.7-2.3-1.15-3.23-2.75-.25-.42.25-.39.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.5-.4-.43-.56-.44-.15 0-.32-.01-.49-.01-.17 0-.45.06-.68.31-.24.25-.91.89-.91 2.18 0 1.29.94 2.54 1.07 2.71.13.17 1.86 2.84 4.5 3.99.63.27 1.12.44 1.5.56.63.2 1.21.17 1.67.1.51-.08 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.07-.1-.23-.17-.48-.3z"/></svg>
+                                WhatsApp Booking
+                            </button>
+                            <a href="tel:+918486627950" class="btn-room-call" aria-label="Call to Book">
+                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2639,9 +2881,6 @@
                 </div>
                 <div class="gallery-item" data-category="skyline">
                     <img src="photos/skylinesuite6.jpg" alt="Skyline Room Modular Kitchen" width="400" height="300" loading="lazy" decoding="async">
-                </div>
-                <div class="gallery-item" data-category="skyline">
-                    <img src="photos/skylinesuite7.jpg" alt="Skyline Room Premium Bathroom" width="400" height="300" loading="lazy" decoding="async">
                 </div>
 
                 <!-- Capsule Studio Photos -->
@@ -2984,7 +3223,7 @@
         const carousels = {};
 
         function initCarousels() {
-            document.querySelectorAll('.room-carousel').forEach(carouselEl => {
+            document.querySelectorAll('.room-carousel:not([data-infinite="true"])').forEach(carouselEl => {
                 const id = carouselEl.dataset.carouselId;
                 const slides = carouselEl.querySelector('.carousel-slides');
                 const slideCount = slides.children.length;
@@ -3395,6 +3634,460 @@
             if (closeBtn) {
                 closeBtn.addEventListener('click', closeBookingModal);
             }
+        });
+
+        // --- ALPINE NEST WCU INFINITE CAROUSEL ---
+        class AlpineWCUCarousel {
+            constructor(wrapper) {
+                this.wrapper = wrapper;
+                this.track = wrapper.querySelector('.wcu-carousel-track');
+                if (!this.track) return;
+                
+                this.slides = Array.from(this.track.children);
+                this.prevBtn = wrapper.querySelector('.wcu-btn-arrow.prev');
+                this.nextBtn = wrapper.querySelector('.wcu-btn-arrow.next');
+                this.pagination = wrapper.querySelector('.wcu-pagination');
+                
+                if (this.slides.length === 0) return;
+                
+                this.currentIndex = 1;
+                this.isDragging = false;
+                this.startPos = 0;
+                this.currentTranslate = 0;
+                this.prevTranslate = 0;
+                this.isTransitioning = false;
+                
+                this.autoplayInterval = null;
+                this.autoplaySpeed = 3500;
+                
+                this.init();
+            }
+            
+            init() {
+                // Clone first and last slides for true infinite loop without jumps
+                const firstClone = this.slides[0].cloneNode(true);
+                const lastClone = this.slides[this.slides.length - 1].cloneNode(true);
+                
+                firstClone.classList.add('clone');
+                lastClone.classList.add('clone');
+                
+                this.track.appendChild(firstClone);
+                this.track.insertBefore(lastClone, this.slides[0]);
+                
+                this.allSlides = Array.from(this.track.children);
+                
+                this.createPagination();
+                this.updatePagination();
+                
+                // Initial Positioning
+                window.requestAnimationFrame(() => {
+                    this.updateSlideWidth();
+                    this.setPositionByIndex();
+                });
+                
+                // Event Listeners
+                window.addEventListener('resize', () => {
+                    this.updateSlideWidth();
+                    this.setPositionByIndex();
+                });
+                
+                if(this.nextBtn) {
+                    this.nextBtn.addEventListener('click', () => { 
+                        this.stopAutoplay(); 
+                        this.moveNext(); 
+                        this.startAutoplay(); 
+                    });
+                }
+                
+                if(this.prevBtn) {
+                    this.prevBtn.addEventListener('click', () => { 
+                        this.stopAutoplay(); 
+                        this.movePrev(); 
+                        this.startAutoplay(); 
+                    });
+                }
+                
+                this.track.addEventListener('transitionend', () => this.handleTransitionEnd());
+                
+                // Touch Events (Swipe)
+                this.track.addEventListener('touchstart', this.touchStart.bind(this), {passive: true});
+                this.track.addEventListener('touchmove', this.touchMove.bind(this), {passive: true});
+                this.track.addEventListener('touchend', this.touchEnd.bind(this));
+                
+                // Mouse Events (Drag)
+                this.track.addEventListener('mousedown', this.touchStart.bind(this));
+                this.track.addEventListener('mousemove', this.touchMove.bind(this));
+                this.track.addEventListener('mouseup', this.touchEnd.bind(this));
+                this.track.addEventListener('mouseleave', () => {
+                    if(this.isDragging) this.touchEnd();
+                    this.startAutoplay();
+                });
+                this.track.addEventListener('mouseenter', () => this.stopAutoplay());
+                
+                this.startAutoplay();
+            }
+            
+            updateSlideWidth() {
+                const slide = this.allSlides[0];
+                const style = window.getComputedStyle(slide);
+                this.slideWidth = slide.getBoundingClientRect().width + parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+            }
+            
+            createPagination() {
+                if (!this.pagination) return;
+                this.pagination.innerHTML = '';
+                this.slides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.className = 'wcu-dot';
+                    dot.addEventListener('click', () => {
+                        if (this.isTransitioning) return;
+                        this.stopAutoplay();
+                        this.currentIndex = index + 1;
+                        this.updateCarousel();
+                        this.startAutoplay();
+                    });
+                    this.pagination.appendChild(dot);
+                });
+            }
+            
+            updatePagination() {
+                if (!this.pagination) return;
+                const dots = Array.from(this.pagination.querySelectorAll('.wcu-dot'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                let activeIndex = this.currentIndex - 1;
+                if (this.currentIndex === 0) activeIndex = this.slides.length - 1;
+                if (this.currentIndex === this.slides.length + 1) activeIndex = 0;
+                
+                if (dots[activeIndex]) dots[activeIndex].classList.add('active');
+            }
+            
+            moveNext() {
+                if (this.isTransitioning) return;
+                this.currentIndex++;
+                this.updateCarousel();
+            }
+            
+            movePrev() {
+                if (this.isTransitioning) return;
+                this.currentIndex--;
+                this.updateCarousel();
+            }
+            
+            updateCarousel() {
+                this.isTransitioning = true;
+                this.track.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+                this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
+                this.updatePagination();
+            }
+            
+            handleTransitionEnd() {
+                this.isTransitioning = false;
+                
+                // Silent jump back to real slides for infinite loop
+                if (this.currentIndex === 0) {
+                    this.track.style.transition = 'none';
+                    this.currentIndex = this.slides.length;
+                    this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
+                } else if (this.currentIndex === this.slides.length + 1) {
+                    this.track.style.transition = 'none';
+                    this.currentIndex = 1;
+                    this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
+                }
+            }
+            
+            setPositionByIndex() {
+                this.track.style.transition = 'none';
+                this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
+            }
+            
+            getPositionX(event) {
+                return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+            }
+            
+            touchStart(event) {
+                if (this.isTransitioning) return;
+                this.stopAutoplay();
+                this.isDragging = true;
+                this.startPos = this.getPositionX(event);
+                this.prevTranslate = -this.currentIndex * this.slideWidth;
+                this.track.style.transition = 'none';
+            }
+            
+            touchMove(event) {
+                if (!this.isDragging) return;
+                const currentPosition = this.getPositionX(event);
+                const diff = currentPosition - this.startPos;
+                this.currentTranslate = this.prevTranslate + diff;
+                this.track.style.transform = `translateX(${this.currentTranslate}px)`;
+            }
+            
+            touchEnd() {
+                if (!this.isDragging) return;
+                this.isDragging = false;
+                
+                const movedBy = this.currentTranslate - this.prevTranslate;
+                
+                // Swipe threshold ~50px
+                if (movedBy < -50 && this.currentIndex < this.allSlides.length - 1) {
+                    this.currentIndex += 1;
+                } else if (movedBy > 50 && this.currentIndex > 0) {
+                    this.currentIndex -= 1;
+                }
+                
+                this.updateCarousel();
+                this.startAutoplay();
+            }
+            
+            startAutoplay() {
+                this.stopAutoplay();
+                this.autoplayInterval = setInterval(() => {
+                    this.moveNext();
+                }, this.autoplaySpeed);
+            }
+            
+            stopAutoplay() {
+                if(this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                }
+            }
+        }
+
+        // Initialize WCU Carousels
+        window.addEventListener('DOMContentLoaded', () => {
+            const featureWrapper = document.getElementById('wcuFeatureCarousel');
+            const imageWrapper = document.getElementById('wcuImageCarousel');
+            
+            // Short timeout ensures CSS flex widths are correctly calculated on mobile before measuring
+            setTimeout(() => {
+                if (featureWrapper) new AlpineWCUCarousel(featureWrapper);
+                if (imageWrapper) new AlpineWCUCarousel(imageWrapper);
+            }, 100);
+        });
+
+        // --- INFINITE ROOM CAROUSEL ---
+        class InfiniteRoomCarousel {
+            constructor(wrapper) {
+                this.wrapper = wrapper;
+                this.track = wrapper.querySelector('.carousel-slides');
+                if (!this.track) return;
+                
+                this.slides = Array.from(this.track.children);
+                this.prevBtn = wrapper.querySelector('.arrow-prev');
+                this.nextBtn = wrapper.querySelector('.arrow-next');
+                this.pagination = wrapper.querySelector('.carousel-dots');
+                
+                if (this.slides.length === 0) return;
+                
+                this.currentIndex = 1;
+                this.isDragging = false;
+                this.startPos = 0;
+                this.currentTranslate = 0;
+                this.prevTranslate = 0;
+                this.isTransitioning = false;
+                
+                this.autoplayInterval = null;
+                this.autoplaySpeed = 3500;
+                
+                this.init();
+            }
+            
+            init() {
+                // Clone first and last slides for true infinite loop
+                const firstClone = this.slides[0].cloneNode(true);
+                const lastClone = this.slides[this.slides.length - 1].cloneNode(true);
+                
+                firstClone.classList.add('clone');
+                lastClone.classList.add('clone');
+                
+                this.track.appendChild(firstClone);
+                this.track.insertBefore(lastClone, this.slides[0]);
+                
+                this.allSlides = Array.from(this.track.children);
+                
+                this.createPagination();
+                this.updatePagination();
+                
+                // Initial Positioning
+                window.requestAnimationFrame(() => {
+                    this.updateSlideWidth();
+                    this.setPositionByIndex();
+                });
+                
+                // Event Listeners
+                window.addEventListener('resize', () => {
+                    this.updateSlideWidth();
+                    this.setPositionByIndex();
+                });
+                
+                if(this.nextBtn) {
+                    this.nextBtn.addEventListener('click', (e) => {
+                        e.preventDefault(); e.stopPropagation();
+                        this.stopAutoplay(); 
+                        this.moveNext(); 
+                        this.startAutoplay(); 
+                    });
+                }
+                
+                if(this.prevBtn) {
+                    this.prevBtn.addEventListener('click', (e) => {
+                        e.preventDefault(); e.stopPropagation();
+                        this.stopAutoplay(); 
+                        this.movePrev(); 
+                        this.startAutoplay(); 
+                    });
+                }
+                
+                this.track.addEventListener('transitionend', () => this.handleTransitionEnd());
+                
+                // Touch Events (Swipe)
+                this.track.addEventListener('touchstart', this.touchStart.bind(this), {passive: true});
+                this.track.addEventListener('touchmove', this.touchMove.bind(this), {passive: true});
+                this.track.addEventListener('touchend', this.touchEnd.bind(this));
+                
+                // Mouse Events (Drag)
+                this.track.addEventListener('mousedown', this.touchStart.bind(this));
+                this.track.addEventListener('mousemove', this.touchMove.bind(this));
+                this.track.addEventListener('mouseup', this.touchEnd.bind(this));
+                this.track.addEventListener('mouseleave', () => {
+                    if(this.isDragging) this.touchEnd();
+                    this.startAutoplay();
+                });
+                this.track.addEventListener('mouseenter', () => this.stopAutoplay());
+                
+                this.startAutoplay();
+            }
+            
+            updateSlideWidth() {
+                this.slideWidth = this.allSlides[0].getBoundingClientRect().width;
+            }
+            
+            createPagination() {
+                if (!this.pagination) return;
+                this.pagination.innerHTML = '';
+                this.slides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.className = 'carousel-dot';
+                    dot.addEventListener('click', (e) => {
+                        e.preventDefault(); e.stopPropagation();
+                        if (this.isTransitioning) return;
+                        this.stopAutoplay();
+                        this.currentIndex = index + 1;
+                        this.updateCarousel();
+                        this.startAutoplay();
+                    });
+                    this.pagination.appendChild(dot);
+                });
+            }
+            
+            updatePagination() {
+                if (!this.pagination) return;
+                const dots = Array.from(this.pagination.querySelectorAll('.carousel-dot'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                let activeIndex = this.currentIndex - 1;
+                if (this.currentIndex === 0) activeIndex = this.slides.length - 1;
+                if (this.currentIndex === this.slides.length + 1) activeIndex = 0;
+                
+                if (dots[activeIndex]) dots[activeIndex].classList.add('active');
+            }
+            
+            moveNext() {
+                if (this.isTransitioning) return;
+                this.currentIndex++;
+                this.updateCarousel();
+            }
+            
+            movePrev() {
+                if (this.isTransitioning) return;
+                this.currentIndex--;
+                this.updateCarousel();
+            }
+            
+            updateCarousel() {
+                this.isTransitioning = true;
+                this.track.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+                this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
+                this.updatePagination();
+            }
+            
+            handleTransitionEnd() {
+                this.isTransitioning = false;
+                
+                // Silent jump back to real slides for infinite loop
+                if (this.currentIndex === 0) {
+                    this.track.style.transition = 'none';
+                    this.currentIndex = this.slides.length;
+                    this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
+                } else if (this.currentIndex === this.slides.length + 1) {
+                    this.track.style.transition = 'none';
+                    this.currentIndex = 1;
+                    this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
+                }
+            }
+            
+            setPositionByIndex() {
+                this.track.style.transition = 'none';
+                this.track.style.transform = `translateX(${-this.currentIndex * this.slideWidth}px)`;
+            }
+            
+            getPositionX(event) {
+                return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+            }
+            
+            touchStart(event) {
+                if (this.isTransitioning) return;
+                this.stopAutoplay();
+                this.isDragging = true;
+                this.startPos = this.getPositionX(event);
+                this.prevTranslate = -this.currentIndex * this.slideWidth;
+                this.track.style.transition = 'none';
+            }
+            
+            touchMove(event) {
+                if (!this.isDragging) return;
+                const currentPosition = this.getPositionX(event);
+                const diff = currentPosition - this.startPos;
+                this.currentTranslate = this.prevTranslate + diff;
+                this.track.style.transform = `translateX(${this.currentTranslate}px)`;
+            }
+            
+            touchEnd() {
+                if (!this.isDragging) return;
+                this.isDragging = false;
+                
+                const movedBy = this.currentTranslate - this.prevTranslate;
+                
+                if (movedBy < -50 && this.currentIndex < this.allSlides.length - 1) {
+                    this.currentIndex += 1;
+                } else if (movedBy > 50 && this.currentIndex > 0) {
+                    this.currentIndex -= 1;
+                }
+                
+                this.updateCarousel();
+                this.startAutoplay();
+            }
+            
+            startAutoplay() {
+                this.stopAutoplay();
+                this.autoplayInterval = setInterval(() => {
+                    this.moveNext();
+                }, this.autoplaySpeed);
+            }
+            
+            stopAutoplay() {
+                if(this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                }
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.room-carousel[data-infinite="true"]').forEach(wrapper => {
+                    new InfiniteRoomCarousel(wrapper);
+                });
+            }, 100);
         });
     </script>
 </body>

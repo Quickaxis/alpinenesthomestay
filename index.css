@@ -29,8 +29,8 @@
   --error: #D9534F;
 
   /* Typography */
-  --font-heading: 'Manrope', 'Satoshi', 'General Sans', sans-serif;
-  --font-body: 'Inter', 'Manrope', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Poppins', sans-serif;
 
   /* Border Radii (Large Rounded System) */
   --radius-card: 36px;

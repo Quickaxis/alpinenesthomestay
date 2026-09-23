@@ -306,3 +306,6 @@ const observer = new IntersectionObserver((entries, self) => {
 reveals.forEach(el => {
   observer.observe(el);
 });
+
+// 9. WHY CHOOSE US CAROUSEL LOGIC
+// (Moved to inline script in index.html as AlpineWCUCarousel to prevent overlap with page-specific logic)
