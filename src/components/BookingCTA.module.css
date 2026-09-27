@@ -1,0 +1,135 @@
+.section {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  padding: 56px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.svgRoute {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.watermarkFA {
+  position: absolute;
+  bottom: -80px;
+  left: -20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(200px, 25vw, 360px);
+  font-weight: 900;
+  color: #fff;
+  opacity: 0.08;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.supportingText {
+  font-size: 15px;
+  max-width: 500px;
+  margin: 0 auto 32px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mainBtn {
+  font-size: 14px !important;
+  padding: 16px 32px !important;
+}
+
+.outlineBtn {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--color-white);
+  background: transparent;
+  font-size: 14px !important;
+  padding: 16px 32px !important;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.outlineBtn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+  
+  .watermarkFA {
+    bottom: -40px;
+    left: -10px;
+  }
+  
+  .svgRoute {
+    width: 200vw;
+    max-width: none;
+  }
+  
+  .heading {
+    word-break: break-word;
+    font-size: clamp(32px, 8vw, 42px);
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .mainBtn, .outlineBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

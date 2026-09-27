@@ -1,0 +1,141 @@
+export const roomsData = [
+  {
+    id: "cozy-2bhk",
+    name: "2BHK Studio",
+    category: "Luxury 2BHK",
+    detail: "LUXURY 2BHK",
+    price: "3,500",
+    capacity: "Up to 5 Guests",
+    units: "1 Unit",
+    src: "/images/2bhk1.webp",
+    alt: "2BHK Studio at Alpine Nest Homestay",
+    aspectRatio: "4/5",
+    description: "An expansive luxury 2BHK suite featuring two private bedrooms, a sunlit living lounge, fully equipped kitchen, and ample space for families and groups.",
+    amenities: [
+      "Air Conditioning",
+      "Smart TV",
+      "High-Speed WiFi",
+      "Free Parking",
+      "Refrigerator",
+      "Private Kitchen",
+      "Attached Bathroom",
+      "Dedicated Workspace",
+      "Spacious Living Area",
+      "Water Purifier",
+      "Premium Interior"
+    ],
+    perfectFor: ["Families", "Group Stay", "Long Vacations", "Corporate Guests"],
+    images: [
+      "/images/2bhk1.webp",
+      "/images/2bhk2.webp",
+      "/images/2bhk3.webp",
+      "/images/2bhk4.webp",
+      "/images/2bhk5.webp",
+      "/images/2bhk6.webp",
+      "/images/2bhk7.webp"
+    ]
+  },
+  {
+    id: "skyline-suite",
+    name: "Skyline Suite",
+    category: "Premium 1BHK",
+    detail: "PREMIUM 1BHK",
+    price: "2,500",
+    capacity: "Up to 3 Guests",
+    units: "3 Units",
+    src: "/images/skylinesuite4.webp",
+    alt: "Skyline Suite at Alpine Nest Homestay",
+    aspectRatio: "4/5",
+    description: "A spacious luxury 1BHK suite with warm wooden accents, dedicated workspace, and private kitchen, crafted for couples, business travellers, and families.",
+    amenities: [
+      "Air Conditioning",
+      "Smart TV",
+      "High-Speed WiFi",
+      "Free Parking",
+      "Refrigerator",
+      "Private Kitchen",
+      "Attached Bathroom",
+      "Dedicated Workspace",
+      "Premium Interior",
+      "Water Purifier",
+      "Fresh Linen",
+      "Daily Cleaning"
+    ],
+    perfectFor: ["Couples", "Business Travellers", "Families", "Long Stays"],
+    images: [
+      "/images/skylinesuite4.webp",
+      "/images/skylinesuite5.webp",
+      "/images/skylinesuite1.webp",
+      "/images/skylinesuite2.webp",
+      "/images/skylinesuite3.webp",
+      "/images/skylinesuite6.webp"
+    ]
+  },
+  {
+    id: "niribili",
+    name: "Niribili",
+    category: "Assamese Charm 1BHK",
+    detail: "ASSAMESE CHARM 1BHK",
+    price: "2,500",
+    capacity: "Up to 3 Guests",
+    units: "1 Unit",
+    src: "/images/nirbili1.webp",
+    alt: "Niribili Suite at Alpine Nest Homestay",
+    aspectRatio: "4/5",
+    description: "True to its Assamese name meaning peaceful serenity, Niribili provides a calming luxury 1BHK retreat with private kitchen and premium amenities in Amolapatty.",
+    amenities: [
+      "Air Conditioning",
+      "Smart TV",
+      "High-Speed WiFi",
+      "Free Parking",
+      "Refrigerator",
+      "Private Kitchen",
+      "Attached Bathroom",
+      "Dedicated Workspace",
+      "Premium Interior",
+      "Water Purifier",
+      "Quiet Environment"
+    ],
+    perfectFor: ["Peaceful Retreat", "Couples", "Business Travellers", "Families"],
+    images: [
+      "/images/nirbili1.webp",
+      "/images/nirbili2.webp",
+      "/images/nirbili3.webp",
+      "/images/nirbili4.webp",
+      "/images/nirbili5.webp",
+      "/images/nirbili6.webp"
+    ]
+  },
+  {
+    id: "capsule-studio",
+    name: "Capsule Studio",
+    category: "Cozy 1RK",
+    detail: "COZY 1RK",
+    price: "2,000",
+    capacity: "2 Guests",
+    units: "1 Unit",
+    src: "/images/1rk.webp",
+    alt: "Capsule Studio at Alpine Nest Homestay",
+    aspectRatio: "4/5",
+    description: "Dibrugarh's signature capsule-themed luxury 1RK studio. Efficient, futuristic ergonomics paired with supreme comfort for solo travellers, students, and couples.",
+    amenities: [
+      "Air Conditioning",
+      "Smart TV",
+      "High-Speed WiFi",
+      "Free Parking",
+      "Private Kitchen",
+      "Attached Bathroom",
+      "Dedicated Workspace",
+      "Capsule Theme Interior",
+      "Water Purifier"
+    ],
+    perfectFor: ["Solo Travellers", "Students", "Business Trips", "Couples", "Short Stay"],
+    images: [
+      "/images/1rk.webp",
+      "/images/1rk2.webp",
+      "/images/1rk3.webp",
+      "/images/1rk4.webp",
+      "/images/1rk5.webp"
+    ]
+  }
+];

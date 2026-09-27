@@ -1,0 +1,318 @@
+.pageWrapper {
+  background-color: var(--color-cream);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.pageWrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(36, 35, 31, 0.05) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bgCurve {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 120vw;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+  color: var(--color-navy);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.breadcrumb {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: rgba(36, 35, 31, 0.6);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: rgba(36, 35, 31, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-orange);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.grid > * {
+  min-width: 0;
+}
+
+.contentCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-orange);
+  margin-bottom: 12px;
+}
+
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 0 0 16px 0;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-dark);
+  opacity: 0.8;
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 24px;
+}
+
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 16px;
+  margin-bottom: 56px;
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-navy);
+  word-break: break-word;
+  min-width: 0;
+}
+
+.amenityIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-orange);
+}
+
+.bookingPanel {
+  background: var(--color-white);
+  border: 1px solid rgba(36,35,31,0.06);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.priceLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(36,35,31,0.5);
+  margin-bottom: 4px;
+}
+
+.priceValue {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-orange);
+}
+
+.bookBtn {
+  background: var(--color-orange);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.bookBtn:hover {
+  background: #A84615;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201, 87, 29, 0.3);
+}
+
+.subNote {
+  font-size: 13px;
+  color: rgba(36, 35, 31, 0.5);
+  text-align: right;
+  padding-right: 12px;
+}
+
+/* Explore Section */
+.exploreSection {
+  margin-top: 120px;
+  padding-top: 60px;
+  border-top: 1.5px dashed rgba(36, 35, 31, 0.15);
+}
+
+.exploreSectionTitle {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.exploreGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.exploreCard {
+  background: var(--color-white);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(36,35,31,0.06);
+}
+
+.exploreCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.exploreImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: #F8F5EF;
+}
+
+.exploreInfo {
+  padding: 16px 20px 8px;
+  flex-grow: 1;
+}
+
+.exploreInfo h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: var(--color-navy);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.exploreInfo p {
+  font-size: 13px;
+  color: rgba(36, 35, 31, 0.6);
+  font-weight: 500;
+}
+
+.exploreAction {
+  padding: 8px 20px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exploreAction .price {
+  font-weight: 700;
+  color: var(--color-orange);
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.viewBtn {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .exploreGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .bgCurve {
+    width: 150vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding-top: 80px;
+  }
+  
+  .bookingPanel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 24px;
+  }
+  
+  .bookBtn {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .subNote {
+    text-align: center;
+    padding-right: 0;
+  }
+  
+  .exploreGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

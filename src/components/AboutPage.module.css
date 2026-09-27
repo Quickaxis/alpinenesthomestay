@@ -1,0 +1,374 @@
+.aboutPage {
+  padding-top: 100px; /* Space for navbar */
+}
+
+/* Enforce Consistent Max-Width Content Grid across sections */
+.heroSection,
+.storySection,
+.valuesSection,
+.locationSection,
+.ctaSection {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Typography Overrides */
+.eyebrow {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* -----------------------------------------------------
+   Hero Section
+   ----------------------------------------------------- */
+.heroSection {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.heroLeft {
+  max-width: 700px;
+}
+
+.mainHeading {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--color-navy);
+}
+
+.heroText {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  color: var(--color-dark-text);
+  line-height: 1.6;
+}
+
+/* Subtle Editorial Typographic Decoration */
+.heroDecoration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0.04;
+  user-select: none;
+}
+
+.largeOutlineText {
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 800;
+  line-height: 0.85;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-navy);
+  font-family: var(--font-primary);
+  letter-spacing: -2px;
+}
+
+
+/* -----------------------------------------------------
+   Story Section
+   ----------------------------------------------------- */
+.storySection {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.storySection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 80px);
+  max-width: 1200px;
+  height: 1px;
+  border-top: 1px dashed var(--color-muted);
+  opacity: 0.3;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.storyHeading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  color: var(--color-navy);
+}
+
+.storyRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-top: 2rem;
+}
+
+.storyRight p {
+  font-size: 1.125rem;
+  color: var(--color-dark-text);
+  line-height: 1.6;
+}
+
+
+/* -----------------------------------------------------
+   Values Section
+   ----------------------------------------------------- */
+.valuesSection {
+  padding-top: 20px; /* Snugs up nicely under the story */
+  padding-bottom: 100px;
+}
+
+.valuesHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.valuesHeading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-navy);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.valueCard {
+  background-color: var(--color-white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.cardNumber {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  margin-bottom: 24px;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: var(--color-navy);
+}
+
+.cardText {
+  color: var(--color-dark-text);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+
+/* -----------------------------------------------------
+   Location Section
+   ----------------------------------------------------- */
+.locationSection {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.locationSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 80px);
+  max-width: 1200px;
+  height: 1px;
+  border-top: 1px dashed var(--color-muted);
+  opacity: 0.3;
+}
+
+.locationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.locationContent {
+  padding-right: 20px;
+}
+
+.locationHeading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 24px;
+  color: var(--color-navy);
+}
+
+.locationText {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Subtle Editorial Typographic Decoration */
+.locationDecoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.06;
+  user-select: none;
+}
+
+.largeOutlineTextLocation {
+  font-size: clamp(3.5rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 0.9;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-navy);
+  font-family: var(--font-primary);
+  letter-spacing: 2px;
+}
+
+.smallSolidTextLocation {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 12px;
+  color: var(--color-navy);
+  margin-top: 10px;
+  margin-right: -12px; /* Offset to center optically despite tracking */
+}
+
+
+/* -----------------------------------------------------
+   CTA Section
+   ----------------------------------------------------- */
+.ctaSection {
+  padding-top: 20px; /* Snugs up nicely under the location */
+  padding-bottom: 100px;
+}
+
+.ctaBox {
+  background-color: var(--color-navy);
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.ctaEyebrow {
+  color: var(--color-orange);
+  opacity: 0.9;
+}
+
+.ctaHeading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.ctaText {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.exploreBtn {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+.exploreBtn:hover {
+  background-color: var(--color-orange-alt, #CF5B20);
+}
+
+.bookBtn {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+}
+
+
+/* -----------------------------------------------------
+   Responsive Adjustments
+   ----------------------------------------------------- */
+@media (max-width: 1024px) {
+  .heroGrid,
+  .storyGrid,
+  .locationGrid {
+    gap: 40px;
+  }
+  
+  .valuesGrid {
+    gap: 24px;
+  }
+  
+  .valueCard {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* On mobile, remove the subtle typographic decoration to preserve clean readability */
+  .heroDecoration,
+  .locationDecoration {
+    display: none;
+  }
+
+  .heroSection {
+    padding-top: 40px;
+  }
+  
+  .heroGrid,
+  .storyGrid,
+  .locationGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .storyRight {
+    padding-top: 0;
+  }
+  
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .locationContent {
+    padding-right: 0;
+  }
+  
+  .ctaBox {
+    padding: 60px 24px;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .ctaButtons > * {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,151 @@
+.footer {
+  background-color: var(--color-navy);
+  color: var(--color-cream);
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 80px;
+}
+
+.brandCol {
+  max-width: 320px;
+}
+
+.brandHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footerLogoImg {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-white);
+  margin-bottom: 0;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.location {
+  text-align: right;
+  line-height: 1.4;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 768px) {
+  .location {
+    text-align: left;
+  }
+}
+
+.linksGrid {
+  display: flex;
+  gap: 80px;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.linkGroup h4 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+.linkGroup a {
+  font-size: 14px;
+  color: var(--color-cream);
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  width: fit-content;
+}
+
+.linkGroup a:hover {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.decorativeBg {
+  position: absolute;
+  bottom: -100px;
+  right: -50px;
+  font-size: 400px;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+}
+
+@media (max-width: 1024px) {
+  .topSection {
+    flex-direction: column;
+    gap: 64px;
+  }
+  
+  .linksGrid {
+    flex-wrap: wrap;
+    gap: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .linksGrid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .bottomSection {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .decorativeBg {
+    font-size: 200px;
+    bottom: 0;
+    right: -20px;
+  }
+}

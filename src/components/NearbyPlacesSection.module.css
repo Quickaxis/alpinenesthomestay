@@ -1,0 +1,274 @@
+.section {
+  background-color: #F5EEDF;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(36, 35, 31, 0.05) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* HEADER */
+.header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1200px;
+  margin: 0 auto 60px; /* Tight gap to carousel */
+  padding: 0 40px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.headerRight {
+  max-width: 320px;
+  text-align: right;
+  font-size: 14px;
+  color: #24231F;
+  line-height: 1.5;
+  opacity: 0.8;
+  margin-bottom: 8px; /* align with heading baseline visually */
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(36, 35, 31, 0.6);
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 700;
+  color: #173F7A;
+  line-height: 1.1;
+  max-width: 600px;
+}
+
+/* CAROUSEL */
+.carouselViewport {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  /* Padding allows the overlapping photos to extend into the space above */
+  padding: 120px 0 40px 0;
+  margin-top: -80px; 
+}
+
+.carouselTrack {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: nearbyMarquee 45s linear infinite;
+  gap: 0;
+}
+
+@keyframes nearbyMarquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.carouselSet {
+  display: flex;
+  gap: 32px;
+  padding-right: 32px; /* Matches gap */
+}
+
+/* CARD CONTAINER */
+.cardContainer {
+  position: relative;
+  width: 260px; 
+  flex-shrink: 0;
+}
+
+/* OVERLAPPING PHOTO */
+.photoPrint {
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  width: 160px;
+  height: 200px;
+  background-color: #FAFAFA;
+  border: 6px solid #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  transform: translateX(-50%) rotate(var(--card-rot));
+  z-index: 2;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.imageFrame {
+  width: 100%;
+  height: 100%;
+  background-color: #EAEAEA;
+}
+
+/* COLORED BASE CARD */
+.coloredCard {
+  width: 100%;
+  height: 320px;
+  border-radius: 12px;
+  padding: 0 24px 24px 24px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  color: var(--color-white);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cardDecoration {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.placeName {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.placeDesc {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin-bottom: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* SMALL CTA BUTTON */
+.exploreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: inherit;
+  background: rgba(0,0,0,0.15);
+  padding: 8px 16px;
+  border-radius: 99px;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.themeYellow .exploreBtn {
+  background: rgba(23, 63, 122, 0.15);
+}
+
+.exploreBtn:hover {
+  background: rgba(0,0,0,0.25);
+}
+
+.themeYellow .exploreBtn:hover {
+  background: rgba(23, 63, 122, 0.25);
+}
+
+/* THEMES */
+.themeOrange { background-color: #D1743B; }
+.themePurple { background-color: #8362B8; }
+.themeYellow { 
+  background-color: #E2B944; 
+  color: #173F7A; 
+}
+.themeGreen { background-color: #798D61; }
+.themeBlue { background-color: #244C8A; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 24px;
+    max-width: 100%;
+  }
+  
+  .heading {
+    word-break: break-word;
+    font-size: clamp(28px, 8vw, 36px);
+  }
+  
+  .headerLeft {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .headerRight {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .carouselViewport {
+    margin-top: -60px;
+  }
+  
+  .cardContainer {
+    width: 280px; 
+    max-width: 90vw;
+  }
+  
+  .photoPrint {
+    width: 165px;
+    height: 205px;
+  }
+  
+  .coloredCard {
+    height: 330px;
+  }
+  
+  .carouselSet {
+    gap: 20px;
+    padding-right: 20px;
+  }
+}
