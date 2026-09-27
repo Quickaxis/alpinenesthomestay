@@ -95,8 +95,8 @@ const RoomSection = () => {
           <div>
             <span className={styles.eyebrow} ref={eyebrowRef}>OUR SUITES & STUDIOS</span>
             <h2 className={styles.heading}>
-              <span className={styles.headingLine} ref={el => headingLinesRef.current[0] = el}>Where Comfort Meets Class</span>
-              <span className={styles.headingLine} ref={el => headingLinesRef.current[1] = el}>in Amolapatty, Dibrugarh</span>
+              <span className={styles.headingLine} ref={el => headingLinesRef.current[0] = el}>Where Comfort</span>
+              <span className={styles.headingLine} ref={el => headingLinesRef.current[1] = el}>Meets Class</span>
             </h2>
           </div>
         </div>
