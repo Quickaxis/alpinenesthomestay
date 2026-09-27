@@ -7,7 +7,7 @@ export const faqData = [
   {
     id: "faq-02",
     question: "Where is Alpine Nest Homestay located in Dibrugarh?",
-    answer: "Alpine Nest is conveniently located in Amolapatty, Dibrugarh, Assam 786003—a peaceful residential neighborhood situated just minutes from Dibrugarh Town, Assam Medical College, Railway Station, and key transit points."
+    answer: "Alpine Nest is conveniently located in Amolapatty, Dibrugarh, Assam—a peaceful residential neighborhood close to Dibrugarh Town, Assam Medical College, Railway Station, Dibrugarh University, and key transit points."
   },
   {
     id: "faq-03",
@@ -32,6 +32,6 @@ export const faqData = [
   {
     id: "faq-07",
     question: "How can I book a room or contact the host?",
-    answer: "You can book directly via WhatsApp or call our team at +91 84866 27950 or +91 96787 84771. Bookings and queries over phone and WhatsApp are attended from 9:00 AM to 9:00 PM daily."
+    answer: "You can book directly via WhatsApp or call our team at +91 84866 27950 or +91 96787 84771."
   }
 ];

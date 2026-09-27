@@ -51,7 +51,10 @@ const ImageSlot = ({
     'bogibeel': '/images/bogibeel.webp',
     'dibrugarhtown': '/images/dibrugarhtown.webp',
     'radhakrishnamandir': '/images/radhakrishnamandir.webp',
-    'dehingpatkai': '/images/dehingpatkai.webp'
+    'dehingpatkai': '/images/dehingpatkai.webp',
+    'goldenpagoda': '/images/goldenpagoda.png',
+    'anini': '/images/anini.png',
+    'pasighat': '/images/pasighat.png'
   };
 
   const finalSrc = src || (id && id.startsWith('/images/') ? id : (imageMap[id] || ''));

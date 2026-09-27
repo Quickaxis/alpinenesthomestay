@@ -9,8 +9,9 @@ const themeClasses = [
   styles.themeYellow,
   styles.themeGreen,
   styles.themeBlue,
-  styles.themeOrange,
 ];
+
+const staticRotations = [-3, 2, -2, 3, -2, 2, -3, 2, 3];
 
 const DecorativePath = () => (
   <svg 
@@ -29,8 +30,8 @@ const DecorativePath = () => (
 );
 
 const FloatingPlaceCard = ({ place, index }) => {
-  const staticRotation = [-3, 2, -2, 3, -2, 2][index % 6];
-  const themeClass = themeClasses[index % 6];
+  const staticRotation = staticRotations[index % staticRotations.length];
+  const themeClass = themeClasses[index % themeClasses.length];
 
   return (
     <div className={styles.cardContainer}>

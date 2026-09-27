@@ -59,9 +59,6 @@ const BookYourStayModal = () => {
         <p className={styles.subtitle}>
           Direct Booking with Alpine Nest Host
         </p>
-        <p className={styles.scheduleText}>
-          Bookings via WhatsApp or Call<br/>9:00 AM to 9:00 PM daily.
-        </p>
 
         <div className={styles.buttonGroup}>
           <a 

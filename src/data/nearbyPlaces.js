@@ -52,5 +52,32 @@ export const nearbyPlacesData = [
     src: "/images/dehingpatkai.webp",
     alt: "Dehing Patkai National Park near Dibrugarh",
     description: "Known as the Amazon of the East, explore Assam's pristine virgin rainforest and rich biodiversity."
+  },
+  {
+    id: "place-07",
+    name: "Golden Pagoda",
+    distance: "Day excursion",
+    imageSlot: "goldenpagoda",
+    src: "/images/goldenpagoda.png",
+    alt: "Golden Pagoda at Namsai",
+    description: "Visit the Golden Pagoda at Namsai, known for its distinctive Buddhist architecture and peaceful surroundings."
+  },
+  {
+    id: "place-08",
+    name: "Anini",
+    distance: "Excursion destination",
+    imageSlot: "anini",
+    src: "/images/anini.png",
+    alt: "Anini in Arunachal Pradesh",
+    description: "Explore Anini in Arunachal Pradesh, surrounded by dramatic mountains, valleys, rivers, and peaceful natural landscapes."
+  },
+  {
+    id: "place-09",
+    name: "Pasighat",
+    distance: "Day excursion",
+    imageSlot: "pasighat",
+    src: "/images/pasighat.png",
+    alt: "Pasighat scenic gateway to Arunachal Pradesh",
+    description: "Discover Pasighat, a scenic gateway to Arunachal Pradesh known for the mighty Siang River, green landscapes, and indigenous hanging bridges."
   }
 ];

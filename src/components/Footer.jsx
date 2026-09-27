@@ -14,11 +14,8 @@ const Footer = () => {
                 alt="Alpine Nest Logo" 
                 className={styles.footerLogoImg} 
               />
-              <span className={styles.logo}>ALPINE NEST</span>
+              <span className={styles.logo}>ALPINE NEST HOMESTAY</span>
             </div>
-            <p className={styles.description}>
-              Where Comfort Meets Class. Dibrugarh's first capsule-themed luxury homestay, offering premium 1RK, 1BHK, and 2BHK accommodations in Amolapatty.
-            </p>
           </div>
           
           <div className={styles.linksGrid}>

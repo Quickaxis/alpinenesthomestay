@@ -66,15 +66,7 @@
   font-size: 15px;
   font-weight: 600;
   color: var(--color-orange);
-  margin-bottom: 4px;
-}
-
-.scheduleText {
-  font-size: 13px;
-  color: var(--color-muted);
-  margin-bottom: 32px;
-  line-height: 1.4;
-  max-width: 260px;
+  margin-bottom: 24px;
 }
 
 .buttonGroup {

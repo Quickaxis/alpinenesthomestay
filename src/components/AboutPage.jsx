@@ -162,7 +162,7 @@ const AboutPage = () => {
           
           <div className={`value-card ${styles.valueCard}`}>
             <span className={styles.cardNumber}>03</span>
-            <h3 className={styles.cardTitle}>AMOLAPATTY PEACE</h3>
+            <h3 className={styles.cardTitle}>PEACEFUL LOCATION</h3>
             <p className={styles.cardText}>A peaceful, secure residential sanctuary in Dibrugarh that provides true relaxation after a busy day.</p>
           </div>
         </div>
